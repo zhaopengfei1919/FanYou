@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="FYHomeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DT9-Kf-kYf">
+                        <rect key="frame" x="15" y="15" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Q56-6p-mAY"/>
+                            <constraint firstAttribute="height" constant="40" id="wEe-cE-VSA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af2-Zz-s5y">
+                        <rect key="frame" x="65" y="15" width="160" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="jWF-Ku-7vB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYe-0f-KBs">
+                        <rect key="frame" x="65" y="40" width="160" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="0u5-tS-ub1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-GK-cbP">
+                        <rect key="frame" x="235" y="25" width="70" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="NHL-Vu-VLN"/>
+                            <constraint firstAttribute="height" constant="20" id="T2s-Rr-Fz7"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="af2-Zz-s5y" firstAttribute="leading" secondItem="DT9-Kf-kYf" secondAttribute="trailing" constant="10" id="34t-NC-p03"/>
+                    <constraint firstItem="af2-Zz-s5y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="7CT-Bl-bY5"/>
+                    <constraint firstAttribute="trailing" secondItem="dfG-GK-cbP" secondAttribute="trailing" constant="15" id="8Ao-oe-PVH"/>
+                    <constraint firstItem="eYe-0f-KBs" firstAttribute="top" secondItem="af2-Zz-s5y" secondAttribute="bottom" constant="10" id="B8l-nj-D6c"/>
+                    <constraint firstItem="dfG-GK-cbP" firstAttribute="leading" secondItem="eYe-0f-KBs" secondAttribute="trailing" constant="10" id="F4u-hk-Jf3"/>
+                    <constraint firstItem="dfG-GK-cbP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="afl-m9-Qhz"/>
+                    <constraint firstItem="dfG-GK-cbP" firstAttribute="leading" secondItem="af2-Zz-s5y" secondAttribute="trailing" constant="10" id="akf-mw-ilW"/>
+                    <constraint firstItem="eYe-0f-KBs" firstAttribute="leading" secondItem="DT9-Kf-kYf" secondAttribute="trailing" constant="10" id="cGn-Yg-gwZ"/>
+                    <constraint firstItem="DT9-Kf-kYf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cgv-nk-GGj"/>
+                    <constraint firstItem="DT9-Kf-kYf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jcG-c4-xSq"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>
