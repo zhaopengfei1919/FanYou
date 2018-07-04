@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FYHomeModel.h"
 
 @interface FYHomeTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *Image;
+@property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ContentLabel;
+@property (weak, nonatomic) IBOutlet UIButton *BuyBtn;
+
+@property (strong,nonatomic) FYHomeModel * Model;
 
 @end

@@ -7,14 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18233CE620EB220D000B11C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CE420EB220D000B11C0 /* SVProgressHUD.m */; };
+		18233CE720EB220D000B11C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18233CE520EB220D000B11C0 /* SVProgressHUD.bundle */; };
+		18233CEB20EB618D000B11C0 /* FYOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CE920EB618D000B11C0 /* FYOrderDetailViewController.m */; };
+		18233CEC20EB618D000B11C0 /* FYOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18233CEA20EB618D000B11C0 /* FYOrderDetailViewController.xib */; };
+		18233CEF20EB68BC000B11C0 /* FYOrderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CEE20EB68BC000B11C0 /* FYOrderDetailModel.m */; };
+		18233CF220EC6E9E000B11C0 /* FYCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CF120EC6E9E000B11C0 /* FYCardModel.m */; };
+		18233CF620EC9335000B11C0 /* FYAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CF420EC9335000B11C0 /* FYAddCardViewController.m */; };
+		18233CF720EC9335000B11C0 /* FYAddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18233CF520EC9335000B11C0 /* FYAddCardViewController.xib */; };
+		183C72DF20E9F688004CBA8E /* FYOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C72DE20E9F688004CBA8E /* FYOrderListViewController.m */; };
+		183C72E320EA0427004CBA8E /* FYOrderListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C72E120EA0427004CBA8E /* FYOrderListTableViewCell.m */; };
+		183C72E420EA0427004CBA8E /* FYOrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C72E220EA0427004CBA8E /* FYOrderListTableViewCell.xib */; };
+		183C72E720EA0AC3004CBA8E /* FYOrderListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C72E620EA0AC3004CBA8E /* FYOrderListModel.m */; };
 		1856033320C8DED1007239E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856033220C8DED1007239E7 /* AppDelegate.m */; };
-		1856033620C8DED1007239E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856033520C8DED1007239E7 /* ViewController.m */; };
+		1856033620C8DED1007239E7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856033520C8DED1007239E7 /* HomeViewController.m */; };
 		1856033920C8DED1007239E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1856033720C8DED1007239E7 /* Main.storyboard */; };
 		1856033B20C8DED3007239E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1856033A20C8DED3007239E7 /* Assets.xcassets */; };
 		1856033E20C8DED3007239E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1856033C20C8DED3007239E7 /* LaunchScreen.storyboard */; };
 		1856034120C8DED3007239E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856034020C8DED3007239E7 /* main.m */; };
 		1856034B20C8DED3007239E7 /* FanYouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856034A20C8DED3007239E7 /* FanYouTests.m */; };
 		1856035620C8DED3007239E7 /* FanYouUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856035520C8DED3007239E7 /* FanYouUITests.m */; };
+		1856036E20C8FD6E007239E7 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856036D20C8FD6E007239E7 /* HomeHeaderView.m */; };
+		1856037020C8FD7C007239E7 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856036F20C8FD7C007239E7 /* HomeHeaderView.xib */; };
+		1856037820C9253A007239E7 /* FYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856037720C9253A007239E7 /* FYNavigationController.m */; };
+		1856037B20CA3BF8007239E7 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856037920CA3BF8007239E7 /* NetWorkManager.m */; };
+		1856038820CE29FA007239E7 /* FYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856038620CE29FA007239E7 /* FYLoginViewController.m */; };
+		1856038920CE29FA007239E7 /* FYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856038720CE29FA007239E7 /* FYLoginViewController.xib */; };
+		1856038D20CF792C007239E7 /* FYHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856038B20CF792C007239E7 /* FYHomeTableViewCell.m */; };
+		1856038E20CF792C007239E7 /* FYHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856038C20CF792C007239E7 /* FYHomeTableViewCell.xib */; };
+		1856039220CF9369007239E7 /* FYRegsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856039020CF9369007239E7 /* FYRegsiteViewController.m */; };
+		1856039320CF9369007239E7 /* FYRegsiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856039120CF9369007239E7 /* FYRegsiteViewController.xib */; };
+		1856039620D0CF3C007239E7 /* FYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856039520D0CF3C007239E7 /* FYUser.m */; };
+		1856039F20D0EA03007239E7 /* sortedChnames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1856039C20D0EA03007239E7 /* sortedChnames.plist */; };
+		185603A020D0EA03007239E7 /* sortedEnames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1856039D20D0EA03007239E7 /* sortedEnames.plist */; };
+		185603A120D0EA03007239E7 /* XWCountryCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856039E20D0EA03007239E7 /* XWCountryCodeController.m */; };
+		185603C920D10188007239E7 /* FYHomeStoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603C720D10188007239E7 /* FYHomeStoreTableViewCell.m */; };
+		185603CA20D10188007239E7 /* FYHomeStoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185603C820D10188007239E7 /* FYHomeStoreTableViewCell.xib */; };
+		185603CD20D10C40007239E7 /* FYHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603CC20D10C40007239E7 /* FYHomeModel.m */; };
+		185603D020D10C53007239E7 /* FYHomeStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603CF20D10C53007239E7 /* FYHomeStoreModel.m */; };
+		185603D520D23D9E007239E7 /* FYAddCommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603D320D23D9E007239E7 /* FYAddCommodityViewController.m */; };
+		185603D620D23D9E007239E7 /* FYAddCommodityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185603D420D23D9E007239E7 /* FYAddCommodityViewController.xib */; };
+		185603DA20D264D8007239E7 /* FYCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603D820D264D8007239E7 /* FYCenterViewController.m */; };
+		185603DB20D264D8007239E7 /* FYCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185603D920D264D8007239E7 /* FYCenterViewController.xib */; };
+		185603DF20D36EFB007239E7 /* FYSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603DD20D36EFB007239E7 /* FYSetupViewController.m */; };
+		185603E020D36EFB007239E7 /* FYSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185603DE20D36EFB007239E7 /* FYSetupViewController.xib */; };
+		185603F020D39323007239E7 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603E420D39323007239E7 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		185603F120D39323007239E7 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603E620D39323007239E7 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		185603F220D39323007239E7 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603E920D39323007239E7 /* EGOImageButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		185603F320D39323007239E7 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603EB20D39323007239E7 /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		185603F420D39323007239E7 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603EE20D39323007239E7 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		185603FA20D3B3DD007239E7 /* FYInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603F820D3B3DD007239E7 /* FYInformationViewController.m */; };
+		185603FB20D3B3DD007239E7 /* FYInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185603F920D3B3DD007239E7 /* FYInformationViewController.xib */; };
+		185603FE20D8E7D4007239E7 /* FYChangeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185603FD20D8E7D4007239E7 /* FYChangeNameViewController.m */; };
+		1856040120D8ECF1007239E7 /* FYChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856040020D8ECF1007239E7 /* FYChangePwdViewController.m */; };
+		1856040520D8FB64007239E7 /* FYStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856040320D8FB64007239E7 /* FYStoreViewController.m */; };
+		1856040620D8FB64007239E7 /* FYStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856040420D8FB64007239E7 /* FYStoreViewController.xib */; };
+		1856040A20DA2B3E007239E7 /* FYWithDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856040820DA2B3E007239E7 /* FYWithDrawViewController.m */; };
+		1856040B20DA2B3E007239E7 /* FYWithDrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856040920DA2B3E007239E7 /* FYWithDrawViewController.xib */; };
+		1856040E20DA422E007239E7 /* FYMyCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856040D20DA422E007239E7 /* FYMyCardViewController.m */; };
+		1856041220DA43AC007239E7 /* FYCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856041020DA43AC007239E7 /* FYCardTableViewCell.m */; };
+		1856041320DA43AC007239E7 /* FYCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856041120DA43AC007239E7 /* FYCardTableViewCell.xib */; };
+		185D7B3E20DB857B0039DAC8 /* FYAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D7B3D20DB857B0039DAC8 /* FYAddressListViewController.m */; };
+		185D7B4220DB858F0039DAC8 /* FYAddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D7B4020DB858F0039DAC8 /* FYAddAddressViewController.m */; };
+		185D7B4320DB858F0039DAC8 /* FYAddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D7B4120DB858F0039DAC8 /* FYAddAddressViewController.xib */; };
+		185D7B4720DB86300039DAC8 /* AddressTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D7B4520DB86300039DAC8 /* AddressTableViewCell1.m */; };
+		185D7B4820DB86300039DAC8 /* AddressTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D7B4620DB86300039DAC8 /* AddressTableViewCell1.xib */; };
+		185D7B4C20DB863E0039DAC8 /* Address2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D7B4A20DB863E0039DAC8 /* Address2TableViewCell.m */; };
+		185D7B4D20DB863E0039DAC8 /* Address2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D7B4B20DB863E0039DAC8 /* Address2TableViewCell.xib */; };
+		1890C59520E21070006CD872 /* FYOpenStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59320E2106F006CD872 /* FYOpenStoreViewController.m */; };
+		1890C59620E21070006CD872 /* FYOpenStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C59420E2106F006CD872 /* FYOpenStoreViewController.xib */; };
+		1890C59A20E212D1006CD872 /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59820E212D1006CD872 /* GCPlaceholderTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1890C5A420E23572006CD872 /* NSDictionary+VASafeObjectForKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59D20E23571006CD872 /* NSDictionary+VASafeObjectForKey.m */; };
+		1890C5A520E23572006CD872 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59E20E23571006CD872 /* Filter.m */; };
+		1890C5A620E23572006CD872 /* NSString+MD5Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59F20E23571006CD872 /* NSString+MD5Category.m */; };
+		1890C5A720E23572006CD872 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5A020E23571006CD872 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1890C5AA20E337CD006CD872 /* HZCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5A920E337CD006CD872 /* HZCityViewController.m */; };
+		1890C5B120E33823006CD872 /* HZProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5AB20E33820006CD872 /* HZProvince.m */; };
+		1890C5B220E33823006CD872 /* HZCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5AC20E33821006CD872 /* HZCity.m */; };
+		1890C5B320E33823006CD872 /* HZDistrict.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5AF20E33822006CD872 /* HZDistrict.m */; };
+		1890C5B520E33A66006CD872 /* city.s3db in Resources */ = {isa = PBXBuildFile; fileRef = 1890C5B420E33A66006CD872 /* city.s3db */; };
+		1890C5B820E33D17006CD872 /* FYAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5B720E33D17006CD872 /* FYAddressModel.m */; };
+		1890C5BB20E39458006CD872 /* FYStoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5BA20E39458006CD872 /* FYStoreListViewController.m */; };
+		1890C5BE20E5FD9D006CD872 /* FYGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5BD20E5FD9D006CD872 /* FYGoodsListViewController.m */; };
+		1890C5C520E60057006CD872 /* FYAddOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5C420E60057006CD872 /* FYAddOrderViewController.m */; };
+		1890C5C820E600E2006CD872 /* OrderHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5C720E600E2006CD872 /* OrderHeaderView.m */; };
+		1890C5CA20E600F8006CD872 /* OrderHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C5C920E600F8006CD872 /* OrderHeaderView.xib */; };
+		1890C5CD20E60566006CD872 /* FYOrderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5CC20E60566006CD872 /* FYOrderFooterView.m */; };
+		1890C5CF20E60570006CD872 /* FYOrderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C5CE20E60570006CD872 /* FYOrderFooterView.xib */; };
+		1890C5D320E60EBB006CD872 /* FYOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5D120E60EBB006CD872 /* FYOrderTableViewCell.m */; };
+		1890C5D420E60EBB006CD872 /* FYOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C5D220E60EBB006CD872 /* FYOrderTableViewCell.xib */; };
+		A4807F7DDF6D70A2B5A1BAD1 /* libPods-FanYou.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C8ADDE997691A220E3C2B8 /* libPods-FanYou.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +117,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18233CE320EB220D000B11C0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		18233CE420EB220D000B11C0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		18233CE520EB220D000B11C0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		18233CE820EB618D000B11C0 /* FYOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderDetailViewController.h; sourceTree = "<group>"; };
+		18233CE920EB618D000B11C0 /* FYOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderDetailViewController.m; sourceTree = "<group>"; };
+		18233CEA20EB618D000B11C0 /* FYOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOrderDetailViewController.xib; sourceTree = "<group>"; };
+		18233CED20EB68BC000B11C0 /* FYOrderDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderDetailModel.h; sourceTree = "<group>"; };
+		18233CEE20EB68BC000B11C0 /* FYOrderDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderDetailModel.m; sourceTree = "<group>"; };
+		18233CF020EC6E9E000B11C0 /* FYCardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYCardModel.h; sourceTree = "<group>"; };
+		18233CF120EC6E9E000B11C0 /* FYCardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYCardModel.m; sourceTree = "<group>"; };
+		18233CF320EC9335000B11C0 /* FYAddCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddCardViewController.h; sourceTree = "<group>"; };
+		18233CF420EC9335000B11C0 /* FYAddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddCardViewController.m; sourceTree = "<group>"; };
+		18233CF520EC9335000B11C0 /* FYAddCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYAddCardViewController.xib; sourceTree = "<group>"; };
+		183C72DD20E9F688004CBA8E /* FYOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderListViewController.h; sourceTree = "<group>"; };
+		183C72DE20E9F688004CBA8E /* FYOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderListViewController.m; sourceTree = "<group>"; };
+		183C72E020EA0427004CBA8E /* FYOrderListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderListTableViewCell.h; sourceTree = "<group>"; };
+		183C72E120EA0427004CBA8E /* FYOrderListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderListTableViewCell.m; sourceTree = "<group>"; };
+		183C72E220EA0427004CBA8E /* FYOrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOrderListTableViewCell.xib; sourceTree = "<group>"; };
+		183C72E520EA0AC3004CBA8E /* FYOrderListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderListModel.h; sourceTree = "<group>"; };
+		183C72E620EA0AC3004CBA8E /* FYOrderListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderListModel.m; sourceTree = "<group>"; };
 		1856032E20C8DED1007239E7 /* FanYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FanYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856033120C8DED1007239E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1856033220C8DED1007239E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1856033420C8DED1007239E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1856033520C8DED1007239E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1856033420C8DED1007239E7 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1856033520C8DED1007239E7 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1856033820C8DED1007239E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1856033A20C8DED3007239E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1856033D20C8DED3007239E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +153,128 @@
 		1856035120C8DED3007239E7 /* FanYouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FanYouUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856035520C8DED3007239E7 /* FanYouUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FanYouUITests.m; sourceTree = "<group>"; };
 		1856035720C8DED3007239E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1856036C20C8FD6E007239E7 /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		1856036D20C8FD6E007239E7 /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		1856036F20C8FD7C007239E7 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		1856037120C90484007239E7 /* fanyoupch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fanyoupch.pch; sourceTree = "<group>"; };
+		1856037520C915F1007239E7 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		1856037620C92539007239E7 /* FYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYNavigationController.h; sourceTree = "<group>"; };
+		1856037720C9253A007239E7 /* FYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYNavigationController.m; sourceTree = "<group>"; };
+		1856037920CA3BF8007239E7 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		1856037A20CA3BF8007239E7 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		1856037C20CE15C2007239E7 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		1856038520CE29FA007239E7 /* FYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYLoginViewController.h; sourceTree = "<group>"; };
+		1856038620CE29FA007239E7 /* FYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYLoginViewController.m; sourceTree = "<group>"; };
+		1856038720CE29FA007239E7 /* FYLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYLoginViewController.xib; sourceTree = "<group>"; };
+		1856038A20CF792C007239E7 /* FYHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYHomeTableViewCell.h; sourceTree = "<group>"; };
+		1856038B20CF792C007239E7 /* FYHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYHomeTableViewCell.m; sourceTree = "<group>"; };
+		1856038C20CF792C007239E7 /* FYHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYHomeTableViewCell.xib; sourceTree = "<group>"; };
+		1856038F20CF9369007239E7 /* FYRegsiteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYRegsiteViewController.h; sourceTree = "<group>"; };
+		1856039020CF9369007239E7 /* FYRegsiteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYRegsiteViewController.m; sourceTree = "<group>"; };
+		1856039120CF9369007239E7 /* FYRegsiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYRegsiteViewController.xib; sourceTree = "<group>"; };
+		1856039420D0CF3C007239E7 /* FYUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYUser.h; sourceTree = "<group>"; };
+		1856039520D0CF3C007239E7 /* FYUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYUser.m; sourceTree = "<group>"; };
+		1856039B20D0EA03007239E7 /* XWCountryCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCountryCodeController.h; sourceTree = "<group>"; };
+		1856039C20D0EA03007239E7 /* sortedChnames.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sortedChnames.plist; sourceTree = "<group>"; };
+		1856039D20D0EA03007239E7 /* sortedEnames.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sortedEnames.plist; sourceTree = "<group>"; };
+		1856039E20D0EA03007239E7 /* XWCountryCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCountryCodeController.m; sourceTree = "<group>"; };
+		185603C620D10188007239E7 /* FYHomeStoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYHomeStoreTableViewCell.h; sourceTree = "<group>"; };
+		185603C720D10188007239E7 /* FYHomeStoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYHomeStoreTableViewCell.m; sourceTree = "<group>"; };
+		185603C820D10188007239E7 /* FYHomeStoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYHomeStoreTableViewCell.xib; sourceTree = "<group>"; };
+		185603CB20D10C40007239E7 /* FYHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYHomeModel.h; sourceTree = "<group>"; };
+		185603CC20D10C40007239E7 /* FYHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYHomeModel.m; sourceTree = "<group>"; };
+		185603CE20D10C53007239E7 /* FYHomeStoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYHomeStoreModel.h; sourceTree = "<group>"; };
+		185603CF20D10C53007239E7 /* FYHomeStoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYHomeStoreModel.m; sourceTree = "<group>"; };
+		185603D220D23D9E007239E7 /* FYAddCommodityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddCommodityViewController.h; sourceTree = "<group>"; };
+		185603D320D23D9E007239E7 /* FYAddCommodityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddCommodityViewController.m; sourceTree = "<group>"; };
+		185603D420D23D9E007239E7 /* FYAddCommodityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYAddCommodityViewController.xib; sourceTree = "<group>"; };
+		185603D720D264D8007239E7 /* FYCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYCenterViewController.h; sourceTree = "<group>"; };
+		185603D820D264D8007239E7 /* FYCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYCenterViewController.m; sourceTree = "<group>"; };
+		185603D920D264D8007239E7 /* FYCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYCenterViewController.xib; sourceTree = "<group>"; };
+		185603DC20D36EFB007239E7 /* FYSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYSetupViewController.h; sourceTree = "<group>"; };
+		185603DD20D36EFB007239E7 /* FYSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYSetupViewController.m; sourceTree = "<group>"; };
+		185603DE20D36EFB007239E7 /* FYSetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYSetupViewController.xib; sourceTree = "<group>"; };
+		185603E320D39323007239E7 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		185603E420D39323007239E7 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		185603E520D39323007239E7 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		185603E620D39323007239E7 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		185603E820D39323007239E7 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
+		185603E920D39323007239E7 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
+		185603EB20D39323007239E7 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		185603EC20D39323007239E7 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		185603EE20D39323007239E7 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		185603EF20D39323007239E7 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		185603F720D3B3DD007239E7 /* FYInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYInformationViewController.h; sourceTree = "<group>"; };
+		185603F820D3B3DD007239E7 /* FYInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYInformationViewController.m; sourceTree = "<group>"; };
+		185603F920D3B3DD007239E7 /* FYInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYInformationViewController.xib; sourceTree = "<group>"; };
+		185603FC20D8E7D4007239E7 /* FYChangeNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYChangeNameViewController.h; sourceTree = "<group>"; };
+		185603FD20D8E7D4007239E7 /* FYChangeNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYChangeNameViewController.m; sourceTree = "<group>"; };
+		185603FF20D8ECF1007239E7 /* FYChangePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYChangePwdViewController.h; sourceTree = "<group>"; };
+		1856040020D8ECF1007239E7 /* FYChangePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYChangePwdViewController.m; sourceTree = "<group>"; };
+		1856040220D8FB64007239E7 /* FYStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYStoreViewController.h; sourceTree = "<group>"; };
+		1856040320D8FB64007239E7 /* FYStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYStoreViewController.m; sourceTree = "<group>"; };
+		1856040420D8FB64007239E7 /* FYStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYStoreViewController.xib; sourceTree = "<group>"; };
+		1856040720DA2B3E007239E7 /* FYWithDrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYWithDrawViewController.h; sourceTree = "<group>"; };
+		1856040820DA2B3E007239E7 /* FYWithDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYWithDrawViewController.m; sourceTree = "<group>"; };
+		1856040920DA2B3E007239E7 /* FYWithDrawViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYWithDrawViewController.xib; sourceTree = "<group>"; };
+		1856040C20DA422E007239E7 /* FYMyCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYMyCardViewController.h; sourceTree = "<group>"; };
+		1856040D20DA422E007239E7 /* FYMyCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYMyCardViewController.m; sourceTree = "<group>"; };
+		1856040F20DA43AC007239E7 /* FYCardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYCardTableViewCell.h; sourceTree = "<group>"; };
+		1856041020DA43AC007239E7 /* FYCardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYCardTableViewCell.m; sourceTree = "<group>"; };
+		1856041120DA43AC007239E7 /* FYCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYCardTableViewCell.xib; sourceTree = "<group>"; };
+		185D7B3C20DB857B0039DAC8 /* FYAddressListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddressListViewController.h; sourceTree = "<group>"; };
+		185D7B3D20DB857B0039DAC8 /* FYAddressListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddressListViewController.m; sourceTree = "<group>"; };
+		185D7B3F20DB858F0039DAC8 /* FYAddAddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddAddressViewController.h; sourceTree = "<group>"; };
+		185D7B4020DB858F0039DAC8 /* FYAddAddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddAddressViewController.m; sourceTree = "<group>"; };
+		185D7B4120DB858F0039DAC8 /* FYAddAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYAddAddressViewController.xib; sourceTree = "<group>"; };
+		185D7B4420DB86300039DAC8 /* AddressTableViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell1.h; sourceTree = "<group>"; };
+		185D7B4520DB86300039DAC8 /* AddressTableViewCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell1.m; sourceTree = "<group>"; };
+		185D7B4620DB86300039DAC8 /* AddressTableViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressTableViewCell1.xib; sourceTree = "<group>"; };
+		185D7B4920DB863E0039DAC8 /* Address2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address2TableViewCell.h; sourceTree = "<group>"; };
+		185D7B4A20DB863E0039DAC8 /* Address2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address2TableViewCell.m; sourceTree = "<group>"; };
+		185D7B4B20DB863E0039DAC8 /* Address2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Address2TableViewCell.xib; sourceTree = "<group>"; };
+		1890C59220E2106F006CD872 /* FYOpenStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOpenStoreViewController.h; sourceTree = "<group>"; };
+		1890C59320E2106F006CD872 /* FYOpenStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOpenStoreViewController.m; sourceTree = "<group>"; };
+		1890C59420E2106F006CD872 /* FYOpenStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOpenStoreViewController.xib; sourceTree = "<group>"; };
+		1890C59820E212D1006CD872 /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
+		1890C59920E212D1006CD872 /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
+		1890C59C20E23571006CD872 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		1890C59D20E23571006CD872 /* NSDictionary+VASafeObjectForKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VASafeObjectForKey.m"; sourceTree = "<group>"; };
+		1890C59E20E23571006CD872 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
+		1890C59F20E23571006CD872 /* NSString+MD5Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Category.m"; sourceTree = "<group>"; };
+		1890C5A020E23571006CD872 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		1890C5A120E23571006CD872 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		1890C5A220E23571006CD872 /* NSString+MD5Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Category.h"; sourceTree = "<group>"; };
+		1890C5A320E23571006CD872 /* NSDictionary+VASafeObjectForKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VASafeObjectForKey.h"; sourceTree = "<group>"; };
+		1890C5A820E337CC006CD872 /* HZCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCityViewController.h; sourceTree = "<group>"; };
+		1890C5A920E337CD006CD872 /* HZCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCityViewController.m; sourceTree = "<group>"; };
+		1890C5AB20E33820006CD872 /* HZProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZProvince.m; sourceTree = "<group>"; };
+		1890C5AC20E33821006CD872 /* HZCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCity.m; sourceTree = "<group>"; };
+		1890C5AD20E33821006CD872 /* HZDistrict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZDistrict.h; sourceTree = "<group>"; };
+		1890C5AE20E33822006CD872 /* HZCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCity.h; sourceTree = "<group>"; };
+		1890C5AF20E33822006CD872 /* HZDistrict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZDistrict.m; sourceTree = "<group>"; };
+		1890C5B020E33823006CD872 /* HZProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZProvince.h; sourceTree = "<group>"; };
+		1890C5B420E33A66006CD872 /* city.s3db */ = {isa = PBXFileReference; lastKnownFileType = file; path = city.s3db; sourceTree = "<group>"; };
+		1890C5B620E33D17006CD872 /* FYAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddressModel.h; sourceTree = "<group>"; };
+		1890C5B720E33D17006CD872 /* FYAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddressModel.m; sourceTree = "<group>"; };
+		1890C5B920E39458006CD872 /* FYStoreListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYStoreListViewController.h; sourceTree = "<group>"; };
+		1890C5BA20E39458006CD872 /* FYStoreListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYStoreListViewController.m; sourceTree = "<group>"; };
+		1890C5BC20E5FD9D006CD872 /* FYGoodsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYGoodsListViewController.h; sourceTree = "<group>"; };
+		1890C5BD20E5FD9D006CD872 /* FYGoodsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYGoodsListViewController.m; sourceTree = "<group>"; };
+		1890C5C320E60057006CD872 /* FYAddOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddOrderViewController.h; sourceTree = "<group>"; };
+		1890C5C420E60057006CD872 /* FYAddOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddOrderViewController.m; sourceTree = "<group>"; };
+		1890C5C620E600E2006CD872 /* OrderHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderHeaderView.h; sourceTree = "<group>"; };
+		1890C5C720E600E2006CD872 /* OrderHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderHeaderView.m; sourceTree = "<group>"; };
+		1890C5C920E600F8006CD872 /* OrderHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHeaderView.xib; sourceTree = "<group>"; };
+		1890C5CB20E60566006CD872 /* FYOrderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderFooterView.h; sourceTree = "<group>"; };
+		1890C5CC20E60566006CD872 /* FYOrderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderFooterView.m; sourceTree = "<group>"; };
+		1890C5CE20E60570006CD872 /* FYOrderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOrderFooterView.xib; sourceTree = "<group>"; };
+		1890C5D020E60EBB006CD872 /* FYOrderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderTableViewCell.h; sourceTree = "<group>"; };
+		1890C5D120E60EBB006CD872 /* FYOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderTableViewCell.m; sourceTree = "<group>"; };
+		1890C5D220E60EBB006CD872 /* FYOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOrderTableViewCell.xib; sourceTree = "<group>"; };
+		1BA16CA68B5C415F3A67360E /* Pods-FanYou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanYou.release.xcconfig"; path = "Pods/Target Support Files/Pods-FanYou/Pods-FanYou.release.xcconfig"; sourceTree = "<group>"; };
+		40C8ADDE997691A220E3C2B8 /* libPods-FanYou.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FanYou.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF348C5120BA639F173D329 /* Pods-FanYou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanYou.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FanYou/Pods-FanYou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4807F7DDF6D70A2B5A1BAD1 /* libPods-FanYou.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +303,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18233CE220EB220D000B11C0 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				18233CE320EB220D000B11C0 /* SVProgressHUD.h */,
+				18233CE420EB220D000B11C0 /* SVProgressHUD.m */,
+				18233CE520EB220D000B11C0 /* SVProgressHUD.bundle */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		1856032520C8DED1007239E7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +320,8 @@
 				1856034920C8DED3007239E7 /* FanYouTests */,
 				1856035420C8DED3007239E7 /* FanYouUITests */,
 				1856032F20C8DED1007239E7 /* Products */,
+				A531E3BBC7C5DCF0056C5DE9 /* Pods */,
+				E68BBC5ADEC8C48CB2674A25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +338,16 @@
 		1856033020C8DED1007239E7 /* FanYou */ = {
 			isa = PBXGroup;
 			children = (
+				1856039920D0E9F8007239E7 /* Third */,
+				1856037220C91471007239E7 /* Base */,
+				1856036320C8FA74007239E7 /* MainView */,
 				1856033120C8DED1007239E7 /* AppDelegate.h */,
 				1856033220C8DED1007239E7 /* AppDelegate.m */,
-				1856033420C8DED1007239E7 /* ViewController.h */,
-				1856033520C8DED1007239E7 /* ViewController.m */,
 				1856033720C8DED1007239E7 /* Main.storyboard */,
 				1856033A20C8DED3007239E7 /* Assets.xcassets */,
 				1856033C20C8DED3007239E7 /* LaunchScreen.storyboard */,
+				1856037120C90484007239E7 /* fanyoupch.pch */,
+				1890C5B420E33A66006CD872 /* city.s3db */,
 				1856033F20C8DED3007239E7 /* Info.plist */,
 				1856034020C8DED3007239E7 /* main.m */,
 			);
@@ -132,6 +372,429 @@
 			path = FanYouUITests;
 			sourceTree = "<group>";
 		};
+		1856036320C8FA74007239E7 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1890C5BF20E5FFF2006CD872 /* Order */,
+				1856037D20CE29D9007239E7 /* Account */,
+				1856038120CE29D9007239E7 /* Store */,
+				1856036420C8FA74007239E7 /* Home */,
+				1856036820C8FA74007239E7 /* Center */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		1856036420C8FA74007239E7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1856036520C8FA74007239E7 /* Controller */,
+				1856036620C8FA74007239E7 /* Model */,
+				1856036720C8FA74007239E7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1856036520C8FA74007239E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1856033420C8DED1007239E7 /* HomeViewController.h */,
+				1856033520C8DED1007239E7 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1856036620C8FA74007239E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				185603CB20D10C40007239E7 /* FYHomeModel.h */,
+				185603CC20D10C40007239E7 /* FYHomeModel.m */,
+				185603CE20D10C53007239E7 /* FYHomeStoreModel.h */,
+				185603CF20D10C53007239E7 /* FYHomeStoreModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1856036720C8FA74007239E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1856036C20C8FD6E007239E7 /* HomeHeaderView.h */,
+				1856036D20C8FD6E007239E7 /* HomeHeaderView.m */,
+				1856036F20C8FD7C007239E7 /* HomeHeaderView.xib */,
+				1856038A20CF792C007239E7 /* FYHomeTableViewCell.h */,
+				1856038B20CF792C007239E7 /* FYHomeTableViewCell.m */,
+				1856038C20CF792C007239E7 /* FYHomeTableViewCell.xib */,
+				185603C620D10188007239E7 /* FYHomeStoreTableViewCell.h */,
+				185603C720D10188007239E7 /* FYHomeStoreTableViewCell.m */,
+				185603C820D10188007239E7 /* FYHomeStoreTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1856036820C8FA74007239E7 /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				1856036920C8FA74007239E7 /* Controller */,
+				1856036A20C8FA74007239E7 /* Model */,
+				1856036B20C8FA74007239E7 /* View */,
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
+		1856036920C8FA74007239E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185603F520D3B39D007239E7 /* 个人资料 */,
+				185603D120D21307007239E7 /* 登录注册 */,
+				185D7B3B20DB84F00039DAC8 /* 地址 */,
+				185603D720D264D8007239E7 /* FYCenterViewController.h */,
+				185603D820D264D8007239E7 /* FYCenterViewController.m */,
+				185603D920D264D8007239E7 /* FYCenterViewController.xib */,
+				185603DC20D36EFB007239E7 /* FYSetupViewController.h */,
+				185603DD20D36EFB007239E7 /* FYSetupViewController.m */,
+				185603DE20D36EFB007239E7 /* FYSetupViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1856036A20C8FA74007239E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1890C5B620E33D17006CD872 /* FYAddressModel.h */,
+				1890C5B720E33D17006CD872 /* FYAddressModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1856036B20C8FA74007239E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1890C5AE20E33822006CD872 /* HZCity.h */,
+				1890C5AC20E33821006CD872 /* HZCity.m */,
+				1890C5AD20E33821006CD872 /* HZDistrict.h */,
+				1890C5AF20E33822006CD872 /* HZDistrict.m */,
+				1890C5B020E33823006CD872 /* HZProvince.h */,
+				1890C5AB20E33820006CD872 /* HZProvince.m */,
+				185D7B4420DB86300039DAC8 /* AddressTableViewCell1.h */,
+				185D7B4520DB86300039DAC8 /* AddressTableViewCell1.m */,
+				185D7B4620DB86300039DAC8 /* AddressTableViewCell1.xib */,
+				185D7B4920DB863E0039DAC8 /* Address2TableViewCell.h */,
+				185D7B4A20DB863E0039DAC8 /* Address2TableViewCell.m */,
+				185D7B4B20DB863E0039DAC8 /* Address2TableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1856037220C91471007239E7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1856037A20CA3BF8007239E7 /* NetWorkManager.h */,
+				1856037920CA3BF8007239E7 /* NetWorkManager.m */,
+				1856037620C92539007239E7 /* FYNavigationController.h */,
+				1856037720C9253A007239E7 /* FYNavigationController.m */,
+				1856037520C915F1007239E7 /* Header.h */,
+				1856037C20CE15C2007239E7 /* Constant.h */,
+				1856039420D0CF3C007239E7 /* FYUser.h */,
+				1856039520D0CF3C007239E7 /* FYUser.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1856037D20CE29D9007239E7 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				1856037E20CE29D9007239E7 /* Controller */,
+				1856037F20CE29D9007239E7 /* Model */,
+				1856038020CE29D9007239E7 /* View */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		1856037E20CE29D9007239E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1856040720DA2B3E007239E7 /* FYWithDrawViewController.h */,
+				1856040820DA2B3E007239E7 /* FYWithDrawViewController.m */,
+				1856040920DA2B3E007239E7 /* FYWithDrawViewController.xib */,
+				1856040C20DA422E007239E7 /* FYMyCardViewController.h */,
+				1856040D20DA422E007239E7 /* FYMyCardViewController.m */,
+				18233CF320EC9335000B11C0 /* FYAddCardViewController.h */,
+				18233CF420EC9335000B11C0 /* FYAddCardViewController.m */,
+				18233CF520EC9335000B11C0 /* FYAddCardViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1856037F20CE29D9007239E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18233CF020EC6E9E000B11C0 /* FYCardModel.h */,
+				18233CF120EC6E9E000B11C0 /* FYCardModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1856038020CE29D9007239E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1856040F20DA43AC007239E7 /* FYCardTableViewCell.h */,
+				1856041020DA43AC007239E7 /* FYCardTableViewCell.m */,
+				1856041120DA43AC007239E7 /* FYCardTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1856038120CE29D9007239E7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1856038220CE29D9007239E7 /* Controller */,
+				1856038320CE29D9007239E7 /* Model */,
+				1856038420CE29D9007239E7 /* View */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		1856038220CE29D9007239E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1890C59220E2106F006CD872 /* FYOpenStoreViewController.h */,
+				1890C59320E2106F006CD872 /* FYOpenStoreViewController.m */,
+				1890C59420E2106F006CD872 /* FYOpenStoreViewController.xib */,
+				1890C5B920E39458006CD872 /* FYStoreListViewController.h */,
+				1890C5BA20E39458006CD872 /* FYStoreListViewController.m */,
+				1890C5BC20E5FD9D006CD872 /* FYGoodsListViewController.h */,
+				1890C5BD20E5FD9D006CD872 /* FYGoodsListViewController.m */,
+				1856040220D8FB64007239E7 /* FYStoreViewController.h */,
+				1856040320D8FB64007239E7 /* FYStoreViewController.m */,
+				1856040420D8FB64007239E7 /* FYStoreViewController.xib */,
+				185603D220D23D9E007239E7 /* FYAddCommodityViewController.h */,
+				185603D320D23D9E007239E7 /* FYAddCommodityViewController.m */,
+				185603D420D23D9E007239E7 /* FYAddCommodityViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1856038320CE29D9007239E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1856038420CE29D9007239E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1856039920D0E9F8007239E7 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				18233CE220EB220D000B11C0 /* SVProgressHUD */,
+				1890C59B20E23571006CD872 /* encord */,
+				1890C59720E212D1006CD872 /* PlaceTextView */,
+				185603E120D39323007239E7 /* EGO */,
+				1856039A20D0EA03007239E7 /* XWCountryCode */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		1856039A20D0EA03007239E7 /* XWCountryCode */ = {
+			isa = PBXGroup;
+			children = (
+				1856039B20D0EA03007239E7 /* XWCountryCodeController.h */,
+				1856039C20D0EA03007239E7 /* sortedChnames.plist */,
+				1856039D20D0EA03007239E7 /* sortedEnames.plist */,
+				1856039E20D0EA03007239E7 /* XWCountryCodeController.m */,
+			);
+			path = XWCountryCode;
+			sourceTree = "<group>";
+		};
+		185603D120D21307007239E7 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				1856038520CE29FA007239E7 /* FYLoginViewController.h */,
+				1856038620CE29FA007239E7 /* FYLoginViewController.m */,
+				1856038720CE29FA007239E7 /* FYLoginViewController.xib */,
+				1856038F20CF9369007239E7 /* FYRegsiteViewController.h */,
+				1856039020CF9369007239E7 /* FYRegsiteViewController.m */,
+				1856039120CF9369007239E7 /* FYRegsiteViewController.xib */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		185603E120D39323007239E7 /* EGO */ = {
+			isa = PBXGroup;
+			children = (
+				185603E220D39323007239E7 /* EGOImageLoader */,
+				185603E720D39323007239E7 /* EGOImageButton */,
+				185603EA20D39323007239E7 /* EGOCache */,
+				185603ED20D39323007239E7 /* EGOImageView */,
+			);
+			path = EGO;
+			sourceTree = "<group>";
+		};
+		185603E220D39323007239E7 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				185603E320D39323007239E7 /* EGOImageLoader.h */,
+				185603E420D39323007239E7 /* EGOImageLoadConnection.m */,
+				185603E520D39323007239E7 /* EGOImageLoadConnection.h */,
+				185603E620D39323007239E7 /* EGOImageLoader.m */,
+			);
+			path = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		185603E720D39323007239E7 /* EGOImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				185603E820D39323007239E7 /* EGOImageButton.h */,
+				185603E920D39323007239E7 /* EGOImageButton.m */,
+			);
+			path = EGOImageButton;
+			sourceTree = "<group>";
+		};
+		185603EA20D39323007239E7 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				185603EB20D39323007239E7 /* EGOCache.m */,
+				185603EC20D39323007239E7 /* EGOCache.h */,
+			);
+			path = EGOCache;
+			sourceTree = "<group>";
+		};
+		185603ED20D39323007239E7 /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				185603EE20D39323007239E7 /* EGOImageView.m */,
+				185603EF20D39323007239E7 /* EGOImageView.h */,
+			);
+			path = EGOImageView;
+			sourceTree = "<group>";
+		};
+		185603F520D3B39D007239E7 /* 个人资料 */ = {
+			isa = PBXGroup;
+			children = (
+				185603F720D3B3DD007239E7 /* FYInformationViewController.h */,
+				185603F820D3B3DD007239E7 /* FYInformationViewController.m */,
+				185603F920D3B3DD007239E7 /* FYInformationViewController.xib */,
+				185603FC20D8E7D4007239E7 /* FYChangeNameViewController.h */,
+				185603FD20D8E7D4007239E7 /* FYChangeNameViewController.m */,
+				185603FF20D8ECF1007239E7 /* FYChangePwdViewController.h */,
+				1856040020D8ECF1007239E7 /* FYChangePwdViewController.m */,
+			);
+			path = "个人资料";
+			sourceTree = "<group>";
+		};
+		185D7B3B20DB84F00039DAC8 /* 地址 */ = {
+			isa = PBXGroup;
+			children = (
+				185D7B3C20DB857B0039DAC8 /* FYAddressListViewController.h */,
+				185D7B3D20DB857B0039DAC8 /* FYAddressListViewController.m */,
+				185D7B3F20DB858F0039DAC8 /* FYAddAddressViewController.h */,
+				185D7B4020DB858F0039DAC8 /* FYAddAddressViewController.m */,
+				185D7B4120DB858F0039DAC8 /* FYAddAddressViewController.xib */,
+				1890C5A820E337CC006CD872 /* HZCityViewController.h */,
+				1890C5A920E337CD006CD872 /* HZCityViewController.m */,
+			);
+			path = "地址";
+			sourceTree = "<group>";
+		};
+		1890C59720E212D1006CD872 /* PlaceTextView */ = {
+			isa = PBXGroup;
+			children = (
+				1890C59820E212D1006CD872 /* GCPlaceholderTextView.m */,
+				1890C59920E212D1006CD872 /* GCPlaceholderTextView.h */,
+			);
+			path = PlaceTextView;
+			sourceTree = "<group>";
+		};
+		1890C59B20E23571006CD872 /* encord */ = {
+			isa = PBXGroup;
+			children = (
+				1890C59C20E23571006CD872 /* NSString+URLEncoding.h */,
+				1890C59D20E23571006CD872 /* NSDictionary+VASafeObjectForKey.m */,
+				1890C59E20E23571006CD872 /* Filter.m */,
+				1890C59F20E23571006CD872 /* NSString+MD5Category.m */,
+				1890C5A020E23571006CD872 /* NSString+URLEncoding.m */,
+				1890C5A120E23571006CD872 /* Filter.h */,
+				1890C5A220E23571006CD872 /* NSString+MD5Category.h */,
+				1890C5A320E23571006CD872 /* NSDictionary+VASafeObjectForKey.h */,
+			);
+			path = encord;
+			sourceTree = "<group>";
+		};
+		1890C5BF20E5FFF2006CD872 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				1890C5C020E60025006CD872 /* Controller */,
+				1890C5C120E60025006CD872 /* Model */,
+				1890C5C220E60025006CD872 /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		1890C5C020E60025006CD872 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1890C5C320E60057006CD872 /* FYAddOrderViewController.h */,
+				1890C5C420E60057006CD872 /* FYAddOrderViewController.m */,
+				183C72DD20E9F688004CBA8E /* FYOrderListViewController.h */,
+				183C72DE20E9F688004CBA8E /* FYOrderListViewController.m */,
+				18233CE820EB618D000B11C0 /* FYOrderDetailViewController.h */,
+				18233CE920EB618D000B11C0 /* FYOrderDetailViewController.m */,
+				18233CEA20EB618D000B11C0 /* FYOrderDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1890C5C120E60025006CD872 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				183C72E520EA0AC3004CBA8E /* FYOrderListModel.h */,
+				183C72E620EA0AC3004CBA8E /* FYOrderListModel.m */,
+				18233CED20EB68BC000B11C0 /* FYOrderDetailModel.h */,
+				18233CEE20EB68BC000B11C0 /* FYOrderDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1890C5C220E60025006CD872 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1890C5C620E600E2006CD872 /* OrderHeaderView.h */,
+				1890C5C720E600E2006CD872 /* OrderHeaderView.m */,
+				1890C5C920E600F8006CD872 /* OrderHeaderView.xib */,
+				1890C5CB20E60566006CD872 /* FYOrderFooterView.h */,
+				1890C5CC20E60566006CD872 /* FYOrderFooterView.m */,
+				1890C5CE20E60570006CD872 /* FYOrderFooterView.xib */,
+				1890C5D020E60EBB006CD872 /* FYOrderTableViewCell.h */,
+				1890C5D120E60EBB006CD872 /* FYOrderTableViewCell.m */,
+				1890C5D220E60EBB006CD872 /* FYOrderTableViewCell.xib */,
+				183C72E020EA0427004CBA8E /* FYOrderListTableViewCell.h */,
+				183C72E120EA0427004CBA8E /* FYOrderListTableViewCell.m */,
+				183C72E220EA0427004CBA8E /* FYOrderListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A531E3BBC7C5DCF0056C5DE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AF348C5120BA639F173D329 /* Pods-FanYou.debug.xcconfig */,
+				1BA16CA68B5C415F3A67360E /* Pods-FanYou.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E68BBC5ADEC8C48CB2674A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40C8ADDE997691A220E3C2B8 /* libPods-FanYou.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +802,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1856035A20C8DED3007239E7 /* Build configuration list for PBXNativeTarget "FanYou" */;
 			buildPhases = (
+				B8DDC83FCFBC74C04E0ACA29 /* [CP] Check Pods Manifest.lock */,
 				1856032A20C8DED1007239E7 /* Sources */,
 				1856032B20C8DED1007239E7 /* Frameworks */,
 				1856032C20C8DED1007239E7 /* Resources */,
+				8DEECDC2E6119A3DA44E692B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +864,11 @@
 				TargetAttributes = {
 					1856032D20C8DED1007239E7 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					1856034520C8DED3007239E7 = {
 						CreatedOnToolsVersion = 9.4;
@@ -235,9 +905,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185603DB20D264D8007239E7 /* FYCenterViewController.xib in Resources */,
+				1890C5CF20E60570006CD872 /* FYOrderFooterView.xib in Resources */,
+				185603CA20D10188007239E7 /* FYHomeStoreTableViewCell.xib in Resources */,
+				1856038920CE29FA007239E7 /* FYLoginViewController.xib in Resources */,
+				185603E020D36EFB007239E7 /* FYSetupViewController.xib in Resources */,
+				18233CF720EC9335000B11C0 /* FYAddCardViewController.xib in Resources */,
+				185603D620D23D9E007239E7 /* FYAddCommodityViewController.xib in Resources */,
+				1856040620D8FB64007239E7 /* FYStoreViewController.xib in Resources */,
+				185D7B4320DB858F0039DAC8 /* FYAddAddressViewController.xib in Resources */,
+				1856038E20CF792C007239E7 /* FYHomeTableViewCell.xib in Resources */,
+				1856039320CF9369007239E7 /* FYRegsiteViewController.xib in Resources */,
+				18233CE720EB220D000B11C0 /* SVProgressHUD.bundle in Resources */,
+				1856040B20DA2B3E007239E7 /* FYWithDrawViewController.xib in Resources */,
+				185603FB20D3B3DD007239E7 /* FYInformationViewController.xib in Resources */,
+				1856037020C8FD7C007239E7 /* HomeHeaderView.xib in Resources */,
+				1890C5D420E60EBB006CD872 /* FYOrderTableViewCell.xib in Resources */,
+				1890C5CA20E600F8006CD872 /* OrderHeaderView.xib in Resources */,
+				185D7B4820DB86300039DAC8 /* AddressTableViewCell1.xib in Resources */,
+				1890C5B520E33A66006CD872 /* city.s3db in Resources */,
+				1856039F20D0EA03007239E7 /* sortedChnames.plist in Resources */,
+				185D7B4D20DB863E0039DAC8 /* Address2TableViewCell.xib in Resources */,
+				185603A020D0EA03007239E7 /* sortedEnames.plist in Resources */,
+				18233CEC20EB618D000B11C0 /* FYOrderDetailViewController.xib in Resources */,
+				183C72E420EA0427004CBA8E /* FYOrderListTableViewCell.xib in Resources */,
 				1856033E20C8DED3007239E7 /* LaunchScreen.storyboard in Resources */,
 				1856033B20C8DED3007239E7 /* Assets.xcassets in Resources */,
+				1856041320DA43AC007239E7 /* FYCardTableViewCell.xib in Resources */,
 				1856033920C8DED1007239E7 /* Main.storyboard in Resources */,
+				1890C59620E21070006CD872 /* FYOpenStoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +953,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DEECDC2E6119A3DA44E692B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FanYou/Pods-FanYou-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FanYou/Pods-FanYou-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8DDC83FCFBC74C04E0ACA29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FanYou-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1856032A20C8DED1007239E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1856033620C8DED1007239E7 /* ViewController.m in Sources */,
+				1856038820CE29FA007239E7 /* FYLoginViewController.m in Sources */,
+				1856040A20DA2B3E007239E7 /* FYWithDrawViewController.m in Sources */,
+				1856037B20CA3BF8007239E7 /* NetWorkManager.m in Sources */,
+				1890C59A20E212D1006CD872 /* GCPlaceholderTextView.m in Sources */,
+				1890C59520E21070006CD872 /* FYOpenStoreViewController.m in Sources */,
+				18233CF220EC6E9E000B11C0 /* FYCardModel.m in Sources */,
+				18233CE620EB220D000B11C0 /* SVProgressHUD.m in Sources */,
+				1856040520D8FB64007239E7 /* FYStoreViewController.m in Sources */,
+				1890C5B220E33823006CD872 /* HZCity.m in Sources */,
+				1890C5A620E23572006CD872 /* NSString+MD5Category.m in Sources */,
+				1890C5D320E60EBB006CD872 /* FYOrderTableViewCell.m in Sources */,
+				185D7B4220DB858F0039DAC8 /* FYAddAddressViewController.m in Sources */,
+				1890C5AA20E337CD006CD872 /* HZCityViewController.m in Sources */,
+				185603D020D10C53007239E7 /* FYHomeStoreModel.m in Sources */,
+				1890C5B320E33823006CD872 /* HZDistrict.m in Sources */,
+				183C72E320EA0427004CBA8E /* FYOrderListTableViewCell.m in Sources */,
+				185603F220D39323007239E7 /* EGOImageButton.m in Sources */,
+				1890C5A520E23572006CD872 /* Filter.m in Sources */,
+				1890C5BE20E5FD9D006CD872 /* FYGoodsListViewController.m in Sources */,
+				1856041220DA43AC007239E7 /* FYCardTableViewCell.m in Sources */,
+				185603A120D0EA03007239E7 /* XWCountryCodeController.m in Sources */,
+				1890C5C820E600E2006CD872 /* OrderHeaderView.m in Sources */,
+				185603F120D39323007239E7 /* EGOImageLoader.m in Sources */,
+				1890C5CD20E60566006CD872 /* FYOrderFooterView.m in Sources */,
+				1856037820C9253A007239E7 /* FYNavigationController.m in Sources */,
+				18233CEB20EB618D000B11C0 /* FYOrderDetailViewController.m in Sources */,
+				1856040120D8ECF1007239E7 /* FYChangePwdViewController.m in Sources */,
+				185603D520D23D9E007239E7 /* FYAddCommodityViewController.m in Sources */,
+				185D7B3E20DB857B0039DAC8 /* FYAddressListViewController.m in Sources */,
+				185603F320D39323007239E7 /* EGOCache.m in Sources */,
+				1856040E20DA422E007239E7 /* FYMyCardViewController.m in Sources */,
+				1890C5C520E60057006CD872 /* FYAddOrderViewController.m in Sources */,
+				185603F420D39323007239E7 /* EGOImageView.m in Sources */,
+				1856038D20CF792C007239E7 /* FYHomeTableViewCell.m in Sources */,
+				185603CD20D10C40007239E7 /* FYHomeModel.m in Sources */,
+				185603FA20D3B3DD007239E7 /* FYInformationViewController.m in Sources */,
+				1890C5B120E33823006CD872 /* HZProvince.m in Sources */,
+				185603DA20D264D8007239E7 /* FYCenterViewController.m in Sources */,
+				185D7B4C20DB863E0039DAC8 /* Address2TableViewCell.m in Sources */,
+				1890C5A420E23572006CD872 /* NSDictionary+VASafeObjectForKey.m in Sources */,
+				183C72DF20E9F688004CBA8E /* FYOrderListViewController.m in Sources */,
+				1856036E20C8FD6E007239E7 /* HomeHeaderView.m in Sources */,
+				1856033620C8DED1007239E7 /* HomeViewController.m in Sources */,
+				1890C5A720E23572006CD872 /* NSString+URLEncoding.m in Sources */,
+				185603F020D39323007239E7 /* EGOImageLoadConnection.m in Sources */,
+				1890C5B820E33D17006CD872 /* FYAddressModel.m in Sources */,
 				1856034120C8DED3007239E7 /* main.m in Sources */,
+				185603DF20D36EFB007239E7 /* FYSetupViewController.m in Sources */,
+				1856039220CF9369007239E7 /* FYRegsiteViewController.m in Sources */,
+				185603C920D10188007239E7 /* FYHomeStoreTableViewCell.m in Sources */,
+				185603FE20D8E7D4007239E7 /* FYChangeNameViewController.m in Sources */,
 				1856033320C8DED1007239E7 /* AppDelegate.m in Sources */,
+				185D7B4720DB86300039DAC8 /* AddressTableViewCell1.m in Sources */,
+				183C72E720EA0AC3004CBA8E /* FYOrderListModel.m in Sources */,
+				1856039620D0CF3C007239E7 /* FYUser.m in Sources */,
+				18233CEF20EB68BC000B11C0 /* FYOrderDetailModel.m in Sources */,
+				1890C5BB20E39458006CD872 /* FYStoreListViewController.m in Sources */,
+				18233CF620EC9335000B11C0 /* FYAddCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,33 +1223,69 @@
 		};
 		1856035B20C8DED3007239E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF348C5120BA639F173D329 /* Pods-FanYou.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FanYou/fanyoupch.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/TZImagePickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/Toast\"",
+				);
 				INFOPLIST_FILE = FanYou/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fy.FanYou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
 			};
 			name = Debug;
 		};
 		1856035C20C8DED3007239E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA16CA68B5C415F3A67360E /* Pods-FanYou.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FanYou/fanyoupch.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/TZImagePickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/Toast\"",
+				);
 				INFOPLIST_FILE = FanYou/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fy.FanYou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
 			};
 			name = Release;
 		};

@@ -18,14 +18,16 @@
     // Drawing code
 //    [self setUI];
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-    gradientLayer.colors = @[(__bridge id)[UIColor colorWithRed:140/255.0 green:214/255.0 blue:253/255.0 alpha:1.0].CGColor, (__bridge id)[UIColor colorWithRed:92/255.0 green:193/255.0 blue:252/255.0 alpha:1.0].CGColor];
+    gradientLayer.colors = @[(__bridge id)UIColorFromRGB(0x8dd6fd).CGColor, (__bridge id)UIColorFromRGB(0x5bc1fc).CGColor];
     gradientLayer.locations = @[@0.2, @0.8];
     gradientLayer.startPoint = CGPointMake(0, 0);
     gradientLayer.endPoint = CGPointMake(1.0, 0);
-    gradientLayer.frame = self.bounds;
+    gradientLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, 197+StatusHeight);
     [self.backImage.layer addSublayer:gradientLayer];
     
-    self.ViewTop.constant = StatusHeight;
+
+    
+    self.ViewTop.constant = StatusHeight-20;
 }
 -(void)setUI{
     UIImageView * image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_WIDTH/2+StatusHeight))];

@@ -24,6 +24,9 @@
 
 - (IBAction)btnClick:(id)sender;
 
+@property (weak, nonatomic) IBOutlet SDCycleScrollView *AdScroll;
+@property (weak, nonatomic) IBOutlet UIButton *headerBtn;
+@property (weak, nonatomic) IBOutlet UILabel *tishiLabel;
 
 
 @end
