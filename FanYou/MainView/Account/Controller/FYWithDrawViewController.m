@@ -7,9 +7,11 @@
 //
 
 #import "FYWithDrawViewController.h"
+#import "FYMyCardViewController.h"
+#import "FYCardModel.h"
 
 @interface FYWithDrawViewController ()<UITextFieldDelegate>
-
+@property (strong,nonatomic) FYCardModel * model;
 @end
 
 @implementation FYWithDrawViewController
@@ -17,9 +19,32 @@
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+-(void)getcard{
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:[FYUser userInfo].userId forKey:@"user_id"];
+    [paraDic setObject:[NSNumber numberWithInteger:0] forKey:@"page_number"];
+    
+    [NetWorkManager requestWithMethod:POST Url:CardList Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            NSArray * array = [FYCardModel mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"][@"items"]];
+            if (array.count > 0) {
+                weakself.model = array[0];
+                [weakself setupUI];
+            }else
+                self.BankName.text = @"点击选择提现银行卡";
+        }else{
+            self.BankName.text = @"点击选择提现银行卡";
+        }
+    } requestRrror:^(id requestRrror) {
+
+    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"余额提现";
+    [self getcard];
     
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.colors = @[(__bridge id)UIColorFromRGB(0x8dd6fd).CGColor, (__bridge id)UIColorFromRGB(0x5bc1fc).CGColor];
@@ -69,6 +94,29 @@
 */
 
 - (IBAction)ChosenBank:(id)sender {
+    FYMyCardViewController * card = [[FYMyCardViewController alloc]init];
+    card.ischosen = YES;
+    [self.navigationController pushViewController:card animated:YES];
+    card.chosen = ^(FYCardModel *model) {
+        self.model = model;
+        
+    };
+}
+-(void)setupUI{
+    if ([self.model.bank_name isEqualToString:@"工商银行"]) {
+        self.BankImage.image = [UIImage imageNamed:@"工行icon-"];
+    }else if ([self.model.bank_name isEqualToString:@"农业银行"]){
+        self.BankImage.image = [UIImage imageNamed:@"农行icon-"];
+    }else if ([self.model.bank_name isEqualToString:@"招商银行"]){
+        self.BankImage.image = [UIImage imageNamed:@"招行icon-"];
+    }else{
+        [self.BankImage sd_setImageWithURL:[NSURL URLWithString:self.model.back_icon]];
+    }
+    
+    if (self.model.card_type == nil) {
+        self.BankName.text = [NSString stringWithFormat:@"%@(%@)",self.model.bank_name,self.model.card_no];
+    }else
+        self.BankName.text = [NSString stringWithFormat:@"%@%@(%@)",self.model.bank_name,self.model.card_type,self.model.card_no];
 }
 
 - (IBAction)withdraw:(id)sender {

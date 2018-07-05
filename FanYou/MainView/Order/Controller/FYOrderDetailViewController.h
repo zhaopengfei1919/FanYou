@@ -14,11 +14,13 @@
 @property (strong ,nonatomic) NSNumber * order_id;
 @property (strong,nonatomic) FYOrderDetailModel * model;
 
-@property (weak, nonatomic) IBOutlet UIView *BackView;
+@property (weak, nonatomic) IBOutlet UIImageView *BackView;
+@property (weak, nonatomic) IBOutlet UILabel *StatusLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PhoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *AreaLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *AreaViewHeight;
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
 

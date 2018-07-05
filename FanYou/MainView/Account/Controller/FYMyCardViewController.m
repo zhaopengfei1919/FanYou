@@ -9,7 +9,6 @@
 #import "FYMyCardViewController.h"
 #import "FYCardTableViewCell.h"
 #import "FYAddCardViewController.h"
-#import "FYCardModel.h"
 
 @interface FYMyCardViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -22,7 +21,7 @@
     [paraDic setObject:[FYUser userInfo].userId forKey:@"user_id"];
     [paraDic setObject:[NSNumber numberWithInteger:page_number] forKey:@"page_number"];
     
-    [NetWorkManager requestWithMethod:POST Url:OrderList Parameters:paraDic success:^(id responseObject) {
+    [NetWorkManager requestWithMethod:POST Url:CardList Parameters:paraDic success:^(id responseObject) {
         NSString * succeeded = [responseObject objectForKey:@"succeeded"];
         if ([succeeded intValue] == 1) {
             NSArray * array = [FYCardModel mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"][@"items"]];
@@ -32,7 +31,7 @@
             [weakself.dataSourse addObjectsFromArray:array];
             [weakself.table reloadData];
         }else{
-            [SVProgressHUD showErrorWithStatus:@"没有更多了"];
+//            [SVProgressHUD showErrorWithStatus:@"没有更多了"];
         }
         [weakself.table.mj_header endRefreshing];
         [weakself.table.mj_footer endRefreshing];
@@ -66,11 +65,12 @@
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(12, 0, SCREEN_WIDTH - 24, 34);
     [btn setBackgroundColor:[UIColor whiteColor]];
-    btn.layer.borderWidth = 0.5;
+    btn.layer.borderWidth = 1;
     btn.layer.borderColor = UIColorFromRGB(0xbecbdb).CGColor;
     [btn setTitle:@"添加银行卡" forState:0];
     [btn setTitleColor:UIColorFromRGB(0x333333) forState:0];
     btn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [btn addTarget:self action:@selector(addcard) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:btn];
     self.table.tableFooterView = view;
     
@@ -133,6 +133,10 @@
     if (self.dataSourse.count == 0) {
         cell.EmptyView.hidden = NO;
         cell.InforView.hidden = YES;
+    }else{
+        cell.EmptyView.hidden = YES;
+        cell.InforView.hidden = NO;
+        cell.model = self.dataSourse[indexPath.row];
     }
     return cell;
 }
@@ -141,5 +145,13 @@
         return 125;
     }
     return 243;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.ischosen) {
+        if (self.chosen) {
+            self.chosen(self.dataSourse[indexPath.row]);
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
 }
 @end

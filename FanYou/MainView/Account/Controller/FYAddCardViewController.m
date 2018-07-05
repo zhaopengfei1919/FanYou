@@ -59,5 +59,23 @@
         [SVProgressHUD showErrorWithStatus:@"请输入正确的银行卡号"];
         return;
     }
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:[FYUser userInfo].userId forKey:@"user_id"];
+    [paraDic setObject:self.NameTF.text forKey:@"bank_name"];
+    [paraDic setObject:self.NumTF.text forKey:@"card_no"];
+    
+    self.addBtn.enabled = NO;
+    [NetWorkManager requestWithMethod:POST Url:AddCard Parameters:paraDic success:^(id responseObject) {
+        self.addBtn.enabled = YES;
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [SVProgressHUD showSuccessWithStatus:@"新增银行卡成功"];
+            [weakself.navigationController popViewControllerAnimated:YES];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject objectForKey:@"errmsg"]];
+    } requestRrror:^(id requestRrror) {
+        
+    }];
 }
 @end

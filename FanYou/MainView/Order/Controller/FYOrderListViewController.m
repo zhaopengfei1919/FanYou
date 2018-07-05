@@ -166,11 +166,11 @@
     line.backgroundColor = UIColorFromRGB(0xeef1f2);
     [view addSubview:line];
     
-    UIImageView * images = [[UIImageView alloc]initWithFrame:CGRectMake(12, 10, 12, 11)];
+    UIImageView * images = [[UIImageView alloc]initWithFrame:CGRectMake(12, 15, 12, 11)];
     images.image = [UIImage imageNamed:@"店铺icon -"];
     [view addSubview:images];
     
-    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(30, 9, 200, 12)];
+    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(30, 14, 200, 12)];
     label.textColor = UIColorFromRGB(0x666666);
     label.font = [UIFont systemFontOfSize:12];
     FYOrderListModel * model = self.dataSourse[section];
@@ -254,7 +254,19 @@
 }
 //取消订单
 -(void)cancelorder:(OrderButton *)btn{
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:btn.model.order_id forKey:@"order_id"];
     
+    [NetWorkManager requestWithMethod:POST Url:OrderLose Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [SVProgressHUD showSuccessWithStatus:@"成功取消订单"];
+            [weakself orderListWith:self.type];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+    } requestRrror:^(id requestRrror) {
+    }];
 }
 //订单付款
 -(void)payOrder:(OrderButton *)btn{
@@ -266,13 +278,29 @@
     [paraDic setObject:btn.model.order_id forKey:@"order_id"];
     
     [NetWorkManager requestWithMethod:POST Url:OrderDetail Parameters:paraDic success:^(id responseObject) {
-        [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [SVProgressHUD showSuccessWithStatus:@"已提醒卖家发货"];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
     } requestRrror:^(id requestRrror) {
     }];
 }
 //确认收货
 -(void)shouhuo:(OrderButton *)btn{
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:btn.model.order_id forKey:@"order_id"];
     
+    [NetWorkManager requestWithMethod:POST Url:OrderConfirm Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [SVProgressHUD showSuccessWithStatus:@"订单确认收货"];
+            [weakself orderListWith:self.type];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+    } requestRrror:^(id requestRrror) {
+    }];
 }
 //删除订单
 -(void)deleteOrder:(OrderButton *)btn{
@@ -280,12 +308,13 @@
     NSMutableDictionary *paraDic = @{}.mutableCopy;
     [paraDic setObject:btn.model.order_id forKey:@"order_id"];
     
-    [NetWorkManager requestWithMethod:POST Url:OrderDetail Parameters:paraDic success:^(id responseObject) {
+    [NetWorkManager requestWithMethod:POST Url:OrderDelete Parameters:paraDic success:^(id responseObject) {
         NSString * succeeded = [responseObject objectForKey:@"succeeded"];
         if ([succeeded intValue] == 1) {
+            [SVProgressHUD showSuccessWithStatus:@"删除订单"];
             [weakself orderListWith:self.type];
-        }
-        [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
     } requestRrror:^(id requestRrror) {
     }];
 }
@@ -303,7 +332,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FYOrderListTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"FYOrderListTableViewCell"];
-    cell.model = self.dataSourse[indexPath.row];
+    cell.model = self.dataSourse[indexPath.section];
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

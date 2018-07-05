@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FYCardModel.h"
+typedef void (^chosencard) (FYCardModel * model);
 @interface FYMyCardViewController : UIViewController{
     NSInteger page_number;
 }
+@property (nonatomic,copy) chosencard chosen;
 
 @property (strong,nonatomic) UITableView * table;
 @property (strong,nonatomic) NSMutableArray * dataSourse;
 
+@property (assign) BOOL ischosen;
 @end

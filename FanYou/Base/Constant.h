@@ -76,13 +76,15 @@
 //我的订单
 #define OrderList @"order/list"
 //订单确认收货
-//#define OrderStatistics @"order/statistics"
+#define OrderConfirm @"order/confirm"
 //删除订单
 #define OrderDelete @"order/delete"
 //订单详情
 #define OrderDetail @"order/detail"
 //提醒发货
 #define Hintdeliver @"order/hint-deliver"
+//取消订单
+#define OrderLose @"order/lose"
 
 
 //银行卡列表
