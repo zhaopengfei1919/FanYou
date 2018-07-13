@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGSimpleImageEditorView.h"
 
 @interface FYOpenStoreViewController : UIViewController{
     UIImagePickerController *Picker;
+    AGSimpleImageEditorView *simpleImageEditorView;
     BOOL ststushidden;
     BOOL ishaveimage;
 }

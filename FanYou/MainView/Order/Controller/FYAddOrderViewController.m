@@ -151,7 +151,7 @@
         [SVProgressHUD showErrorWithStatus:@"请选择收货地址"];
         return;
     }
-    WS(weakself);
+//    WS(weakself);
     NSMutableDictionary *paraDic = @{}.mutableCopy;
     [paraDic setObject:[FYUser userInfo].userId forKey:@"user_id"];
     [paraDic setObject:self.headerView.model.addr_id forKey:@"addr_id"];
@@ -167,8 +167,7 @@
     [NetWorkManager requestWithMethod:POST Url:OrderCreate Parameters:paraDic success:^(id responseObject) {
         NSString * succeeded = [responseObject objectForKey:@"succeeded"];
         if ([succeeded intValue] == 1) {
-            weakself.model = [FYHomeModel mj_objectWithKeyValues:[[responseObject safeObjectForKey:@"result"][@"items"] objectAtIndex:0]];
-            [self.table reloadData];
+
         }else{
             [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
         }

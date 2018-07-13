@@ -20,6 +20,8 @@
 #import "FYStoreListViewController.h"
 #import "FYGoodsListViewController.h"
 #import "FYAddOrderViewController.h"
+#import "FYBannerModel.h"
+#import "FYWebViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,homeHeaderViewDelegate>
 
@@ -41,9 +43,12 @@
     if ([[FYUser userInfo].userId intValue] > 0) {
         self.header.headerBtn.hidden = YES;
         self.header.tishiLabel.hidden = YES;
+        self.header.AdScroll.hidden = NO;
+        [self adlist];
     }else{
         self.header.headerBtn.hidden = NO;
         self.header.tishiLabel.hidden = NO;
+        self.header.AdScroll.hidden = YES;
     }
 }
 -(void)hotshop{
@@ -78,17 +83,38 @@
         
     }];
 }
+-(void)adlist{
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    
+    [NetWorkManager requestWithMethod:POST Url:AdList Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            weakself.bannerArray = [FYBannerModel mj_objectArrayWithKeyValuesArray:[responseObject objectForKey:@"result"][@"items"]];
+            NSMutableArray *pic = [NSMutableArray array];
+            for (int i = 0; i <weakself.bannerArray.count; i ++) {
+                [pic addObject:[weakself.bannerArray[i] img]];
+            }
+            weakself.header.imageUrl = pic;
+            self.header.AdScroll.hidden = NO;
+        }else
+            self.header.AdScroll.hidden = YES;
+    } requestRrror:^(id requestRrror) {
+        
+    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     adjustsScrollViewInsets_NO(self.table, self);
     self.tableTop.constant = -StatusHeight;
     
     self.dataSourse = [[NSMutableArray alloc]init];
+    self.bannerArray = [[NSMutableArray alloc]init];
     [self.dataSourse addObject:@[]];
     [self.dataSourse addObject:@[]];
     [self hotgoods];
     [self hotshop];
-    
+
     UIView *baseHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH , 412+StatusHeight)];
     self.header = [[[NSBundle mainBundle] loadNibNamed:@"HomeHeaderView" owner:self options:nil] objectAtIndex:0];
     self.header.frame = CGRectMake(0, 0, SCREEN_WIDTH, 412+StatusHeight);
@@ -103,10 +129,18 @@
 -(void)viewDidLayoutSubView{
     
 }
+//轮播图点击
+-(void)homeScrollViewClickWith:(NSInteger)index{
+    FYBannerModel * model = self.bannerArray[index];
+    FYWebViewController * web = [[FYWebViewController alloc]init];
+    web.webUrl = model.url;
+    [self.navigationController pushViewController:web animated:YES];
+}
 -(void)homeheaderviewClick:(NSInteger)btntag{
     if (btntag == 3) {
         FYLoginViewController * login = [[FYLoginViewController alloc]init];
         [self.navigationController pushViewController:login animated:YES];
+        return;
     }else if (btntag == 2){//搜索框
 
         return;
@@ -123,15 +157,15 @@
         [SVProgressHUD showErrorWithStatus:@"请先登录"];
         return;
     }
-    if (btntag == 1){
+    if (btntag == 1){//左上角个人中心
         FYCenterViewController * center = [[FYCenterViewController alloc]init];
         [self.navigationController pushViewController:center animated:YES];
     }else if (btntag == 5){
 
-    }else if (btntag == 6){
+    }else if (btntag == 6){//提现
         FYWithDrawViewController * withdraw = [[FYWithDrawViewController alloc]init];
         [self.navigationController pushViewController:withdraw animated:YES];
-    }else if (btntag == 7){
+    }else if (btntag == 7){//开店
         FYOpenStoreViewController * openstore = [[FYOpenStoreViewController alloc]init];
         [self.navigationController pushViewController:openstore animated:YES];
     }else if (btntag == 10){
@@ -258,34 +292,27 @@
     NSArray * array2 = self.dataSourse[1];
     if (array1.count > 0 && array2.count > 0) {
         if (indexPath.section == 1) {
-            FYStoreViewController * store = [[FYStoreViewController alloc]init];
             FYHomeStoreModel * model = array2[indexPath.row];
-            store.model = array2[indexPath.row];
-            if ([[FYUser userInfo].userId isEqualToNumber:[NSNumber numberWithInt:0]]) {
-                store.ismyself = NO;
-            }else{
-                if ([model.is_mine isEqualToNumber:[FYUser userInfo].userId]) {
-                    store.ismyself = YES;
-                }else
-                    store.ismyself = NO;
-            }
-            [self.navigationController pushViewController:store animated:YES];
+            [self pushview:model];
         }
     }else if (array2.count > 0 || array1.count > 0){
         if (array2.count > 0) {
-            FYStoreViewController * store = [[FYStoreViewController alloc]init];
             FYHomeStoreModel * model = array2[indexPath.row];
-            store.model = array2[indexPath.row];
-            if ([[FYUser userInfo].userId isEqualToNumber:[NSNumber numberWithInt:0]]) {
-                store.ismyself = NO;
-            }else{
-                if ([model.is_mine isEqualToNumber:[FYUser userInfo].userId]) {
-                    store.ismyself = YES;
-                }else
-                    store.ismyself = NO;
-            }
-            [self.navigationController pushViewController:store animated:YES];
+            [self pushview:model];
         }
     }
+}
+-(void)pushview:(FYHomeStoreModel *)model{
+    FYStoreViewController * store = [[FYStoreViewController alloc]init];
+    store.model = model;
+    if ([[FYUser userInfo].userId isEqualToNumber:[NSNumber numberWithInt:0]]) {
+        store.ismyself = NO;
+    }else{
+        if ([model.is_mine isEqualToNumber:[FYUser userInfo].userId]) {
+            store.ismyself = YES;
+        }else
+            store.ismyself = NO;
+    }
+    [self.navigationController pushViewController:store animated:YES];
 }
 @end

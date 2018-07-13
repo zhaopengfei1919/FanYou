@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableTop;
 
 @property (strong,nonatomic) NSMutableArray * dataSourse;
+@property (strong,nonatomic) NSMutableArray * bannerArray;
 @end
 

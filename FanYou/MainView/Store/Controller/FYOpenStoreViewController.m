@@ -33,6 +33,7 @@ NSString *UPLOAD_IMAGE=@"";
     self.DescTextview.layer.cornerRadius = 2;
     self.DescTextview.layer.borderWidth = 0.5;
     self.DescTextview.layer.borderColor = UIColorFromRGB(0xdddddd).CGColor;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -57,6 +58,18 @@ NSString *UPLOAD_IMAGE=@"";
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     [self.DescTextview resignFirstResponder];
+    return YES;
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.TitleTF resignFirstResponder];
+    [self.DescTextview resignFirstResponder];
+}
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]){ //判断输入的字是否是回车，即按下return
+        //在这里做你响应return键的代码
+        [self.DescTextview resignFirstResponder];
+        return NO; //这里返回NO，就代表return键值失效，即页面上按下return，不会出现换行，如果为yes，则输入页面会换行
+    }
     return YES;
 }
 /*
@@ -165,6 +178,15 @@ NSString *UPLOAD_IMAGE=@"";
         {
             image = info[UIImagePickerControllerOriginalImage];
         }
+        UIImage *newImg;
+        NSLog(@"qww");
+        simpleImageEditorView = [[AGSimpleImageEditorView alloc] initWithImage:image];
+        simpleImageEditorView.borderWidth = 1.f;
+        simpleImageEditorView.borderColor = [UIColor darkGrayColor];
+        simpleImageEditorView.ratioViewBorderWidth = 3.f;
+        simpleImageEditorView.ratio = 1./1.;
+        
+        newImg = simpleImageEditorView.output;
 
         [picker dismissViewControllerAnimated:YES completion:nil];
         ishaveimage = YES;

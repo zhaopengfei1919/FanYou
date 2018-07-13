@@ -27,11 +27,18 @@
         if ([succeeded intValue] == 1) {
             NSDictionary * result = [responseObject safeObjectForKey:@"result"];
             NSArray * items = [FYAddressModel mj_objectArrayWithKeyValuesArray:[result safeObjectForKey:@"items"]];
-            [weakself.dataSourse removeAllObjects];
+            if (self->page_number == 0) {
+                [weakself.dataSourse removeAllObjects];
+            }
             [weakself.dataSourse addObjectsFromArray:items];
             [weakself.table reloadData];
-        }else
+        }else{
+            if (self->page_number == 0) {
+                [weakself.dataSourse removeAllObjects];
+                [weakself.table reloadData];
+            }
             [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+        }
         [weakself.table.mj_header endRefreshing];
         [weakself.table.mj_footer endRefreshing];
     } requestRrror:^(id requestRrror) {

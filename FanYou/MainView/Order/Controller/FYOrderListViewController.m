@@ -196,7 +196,8 @@
     FYOrderListModel * model = self.dataSourse[section];
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"共%@件商品 合计：￥%.2f(含运费￥%.2f)",model.goods_count,[model.total_price floatValue],[model.express_fee floatValue]]];
     NSString * count = [NSString stringWithFormat:@"%@",model.goods_count];
-    [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(9+count.length, 2)];
+    NSString * total_price = [NSString stringWithFormat:@"%@",model.total_price];
+    [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(9+count.length, total_price.length)];
     label.attributedText = string;
     label.textAlignment = NSTextAlignmentRight;
     [view addSubview:label];

@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"上传商品";
+    self.title = self.titleStr;
     ishaveimage = NO;
     
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
@@ -36,6 +36,19 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     [self.DescTextView resignFirstResponder];
+    return YES;
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.TitleTF resignFirstResponder];
+    [self.PriceTF resignFirstResponder];
+    [self.DescTextView resignFirstResponder];
+}
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]){ //判断输入的字是否是回车，即按下return
+        //在这里做你响应return键的代码
+        [self.DescTextView resignFirstResponder];
+        return NO; //这里返回NO，就代表return键值失效，即页面上按下return，不会出现换行，如果为yes，则输入页面会换行
+    }
     return YES;
 }
 - (void)didReceiveMemoryWarning {
@@ -149,10 +162,18 @@
         {
             image = info[UIImagePickerControllerOriginalImage];
         }
+        UIImage *newImg;
+        NSLog(@"qww");
+        simpleImageEditorView = [[AGSimpleImageEditorView alloc] initWithImage:image];
+        simpleImageEditorView.borderWidth = 1.f;
+        simpleImageEditorView.borderColor = [UIColor darkGrayColor];
+        simpleImageEditorView.ratioViewBorderWidth = 3.f;
+        simpleImageEditorView.ratio = 1./1.;
         
+        newImg = simpleImageEditorView.output;
         [picker dismissViewControllerAnimated:YES completion:nil];
         ishaveimage = YES;
-        [self.ChosenBtn setImage:image forState:0];
+        [self.ChosenBtn setImage:newImg forState:0];
     }
 }
 - (IBAction)sure:(id)sender {
@@ -179,6 +200,7 @@
     [paraDic setObject:self.DescTextView.text forKey:@"goods_desc"];
     [paraDic setObject:self.PriceTF.text forKey:@"goods_price"];
     [paraDic setObject:[NSNumber numberWithInt:1] forKey:@"is_seven"];
+    [paraDic setObject:[NSNumber numberWithInt:1] forKey:@"is_hot"];
     [paraDic setObject:self.shopId forKey:@"shop_id"];
     
     NSData * data = UIImageJPEGRepresentation(self.ChosenBtn.imageView.image, 0.4);

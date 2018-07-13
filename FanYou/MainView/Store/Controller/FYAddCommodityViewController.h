@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGSimpleImageEditorView.h"
 
 @interface FYAddCommodityViewController : UIViewController{
     UIImagePickerController *Picker;
+    AGSimpleImageEditorView *simpleImageEditorView;
     BOOL ststushidden;
     BOOL ishaveimage;
 }
@@ -24,4 +26,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *SureBtn;
 
 @property (strong ,nonatomic) NSNumber * shopId;
+@property (strong ,nonatomic) NSString * titleStr;
 @end

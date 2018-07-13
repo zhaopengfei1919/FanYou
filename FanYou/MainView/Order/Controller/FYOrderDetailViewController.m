@@ -108,7 +108,18 @@
 }
 //取消订单
 -(void)cancelorder:(UIButton *)btn{
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:self.model.order_id forKey:@"order_id"];
     
+    [NetWorkManager requestWithMethod:POST Url:OrderLose Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [weakself.navigationController popViewControllerAnimated:YES];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+    } requestRrror:^(id requestRrror) {
+    }];
 }
 //订单付款
 -(void)payOrder:(UIButton *)btn{
@@ -119,14 +130,25 @@
     NSMutableDictionary *paraDic = @{}.mutableCopy;
     [paraDic setObject:self.model.order_id forKey:@"order_id"];
     
-    [NetWorkManager requestWithMethod:POST Url:OrderDetail Parameters:paraDic success:^(id responseObject) {
+    [NetWorkManager requestWithMethod:POST Url:Hintdeliver Parameters:paraDic success:^(id responseObject) {
         [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
     } requestRrror:^(id requestRrror) {
     }];
 }
 //确认收货
 -(void)shouhuo:(UIButton *)btn{
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:self.model.order_id forKey:@"order_id"];
     
+    [NetWorkManager requestWithMethod:POST Url:OrderConfirm Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [weakself.navigationController popViewControllerAnimated:YES];
+        }else
+            [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+    } requestRrror:^(id requestRrror) {
+    }];
 }
 //删除订单
 -(void)deleteOrder:(UIButton *)btn{
@@ -134,7 +156,7 @@
     NSMutableDictionary *paraDic = @{}.mutableCopy;
     [paraDic setObject:self.model.order_id forKey:@"order_id"];
     
-    [NetWorkManager requestWithMethod:POST Url:OrderDetail Parameters:paraDic success:^(id responseObject) {
+    [NetWorkManager requestWithMethod:POST Url:OrderDelete Parameters:paraDic success:^(id responseObject) {
         NSString * succeeded = [responseObject objectForKey:@"succeeded"];
         if ([succeeded intValue] == 1) {
             [weakself.navigationController popViewControllerAnimated:YES];

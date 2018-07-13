@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HAX-hL-OaZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HAX-hL-OaZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,10 +30,6 @@
         <scene sceneID="vqa-Uz-I8u">
             <objects>
                 <viewController id="QkE-Di-vMD" customClass="HomeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Oew-np-WJh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Z0H-Ul-mVT"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7gg-Td-wB4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,14 +43,45 @@
                                     <outlet property="delegate" destination="QkE-Di-vMD" id="GIx-Tt-fWk"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nov-03-PTL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrG-tF-u3k">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="AVr-qY-pZT"/>
+                                            <constraint firstAttribute="width" constant="43" id="jck-20-1jj"/>
+                                        </constraints>
+                                        <state key="normal" image="我的-icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC4-d7-YtZ">
+                                        <rect key="frame" x="43" y="7" width="322" height="30"/>
+                                        <state key="normal" image="搜索框"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="rC4-d7-YtZ" firstAttribute="top" secondItem="nov-03-PTL" secondAttribute="top" constant="7" id="2H5-Y0-Ljh"/>
+                                    <constraint firstAttribute="bottom" secondItem="rC4-d7-YtZ" secondAttribute="bottom" constant="7" id="Gxj-mZ-97C"/>
+                                    <constraint firstAttribute="trailing" secondItem="rC4-d7-YtZ" secondAttribute="trailing" constant="10" id="Ilg-IW-1P8"/>
+                                    <constraint firstItem="rrG-tF-u3k" firstAttribute="leading" secondItem="nov-03-PTL" secondAttribute="leading" id="Jg6-1V-UFM"/>
+                                    <constraint firstItem="rrG-tF-u3k" firstAttribute="top" secondItem="nov-03-PTL" secondAttribute="top" id="LpL-dd-2Lv"/>
+                                    <constraint firstAttribute="height" constant="44" id="Oe4-Lh-BG3"/>
+                                    <constraint firstItem="rC4-d7-YtZ" firstAttribute="leading" secondItem="rrG-tF-u3k" secondAttribute="trailing" id="t69-QA-R6U"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="MOF-jE-xwV" secondAttribute="trailing" id="345-HX-ZBD"/>
-                            <constraint firstItem="MOF-jE-xwV" firstAttribute="leading" secondItem="7gg-Td-wB4" secondAttribute="leading" id="6jd-Zn-JmY"/>
-                            <constraint firstItem="Z0H-Ul-mVT" firstAttribute="top" secondItem="MOF-jE-xwV" secondAttribute="bottom" id="DsM-Me-r99"/>
-                            <constraint firstItem="MOF-jE-xwV" firstAttribute="top" secondItem="Oew-np-WJh" secondAttribute="bottom" id="V9T-lB-67B"/>
+                            <constraint firstItem="wC2-wi-Lzz" firstAttribute="trailing" secondItem="MOF-jE-xwV" secondAttribute="trailing" id="345-HX-ZBD"/>
+                            <constraint firstItem="MOF-jE-xwV" firstAttribute="leading" secondItem="wC2-wi-Lzz" secondAttribute="leading" id="6jd-Zn-JmY"/>
+                            <constraint firstItem="nov-03-PTL" firstAttribute="top" secondItem="wC2-wi-Lzz" secondAttribute="top" id="8wl-tk-0bw"/>
+                            <constraint firstItem="wC2-wi-Lzz" firstAttribute="trailing" secondItem="nov-03-PTL" secondAttribute="trailing" id="9DO-lK-4aa"/>
+                            <constraint firstItem="wC2-wi-Lzz" firstAttribute="bottom" secondItem="MOF-jE-xwV" secondAttribute="bottom" id="DsM-Me-r99"/>
+                            <constraint firstItem="MOF-jE-xwV" firstAttribute="top" secondItem="wC2-wi-Lzz" secondAttribute="top" id="V9T-lB-67B"/>
+                            <constraint firstItem="nov-03-PTL" firstAttribute="leading" secondItem="wC2-wi-Lzz" secondAttribute="leading" id="g7Z-Yc-xla"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="wC2-wi-Lzz"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y0l-E9-F3p"/>
                     <connections>
@@ -66,4 +94,8 @@
             <point key="canvasLocation" x="292" y="114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="我的-icon" width="21" height="21"/>
+        <image name="搜索框" width="320" height="30"/>
+    </resources>
 </document>

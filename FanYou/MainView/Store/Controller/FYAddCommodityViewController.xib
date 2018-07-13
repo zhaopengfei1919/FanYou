@@ -154,6 +154,16 @@
                                         <action selector="ChosenImage:" destination="-1" eventType="touchUpInside" id="yuw-aW-rif"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片请限于500*500PX    2M以内" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxx-sc-0SL">
+                                    <rect key="frame" x="82" y="343" width="160" height="12"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="160" id="o5k-4n-3pg"/>
+                                        <constraint firstAttribute="height" constant="12" id="oIh-Vf-6qK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -164,6 +174,7 @@
                                 <constraint firstItem="uq9-D0-v4F" firstAttribute="leading" secondItem="7qf-4F-QmH" secondAttribute="trailing" constant="5" id="5AK-43-dWp"/>
                                 <constraint firstItem="H3K-v7-FmM" firstAttribute="top" secondItem="fVA-QV-AAg" secondAttribute="bottom" constant="35" id="B6q-xJ-7Ph"/>
                                 <constraint firstItem="H3K-v7-FmM" firstAttribute="leading" secondItem="9dP-HH-Eo2" secondAttribute="trailing" constant="5" id="HA4-s4-FP1"/>
+                                <constraint firstItem="Pxx-sc-0SL" firstAttribute="top" secondItem="tOs-Tg-QK3" secondAttribute="bottom" constant="5" id="HAq-1z-CqN"/>
                                 <constraint firstItem="tOs-Tg-QK3" firstAttribute="leading" secondItem="bYi-tm-lgu" secondAttribute="trailing" constant="5" id="HSd-eu-aib"/>
                                 <constraint firstAttribute="height" constant="500" id="Hbt-MS-OfW"/>
                                 <constraint firstItem="bYi-tm-lgu" firstAttribute="leading" secondItem="OSC-mP-HCy" secondAttribute="leading" constant="12" id="Qyt-OJ-CEc"/>
@@ -172,6 +183,7 @@
                                 <constraint firstItem="OM4-gZ-Aoa" firstAttribute="top" secondItem="OSC-mP-HCy" secondAttribute="top" constant="40" id="YM6-Id-ULK"/>
                                 <constraint firstItem="g5p-dt-NW0" firstAttribute="leading" secondItem="OSC-mP-HCy" secondAttribute="leading" constant="12" id="ZWk-fG-LDW"/>
                                 <constraint firstItem="fVA-QV-AAg" firstAttribute="top" secondItem="OSC-mP-HCy" secondAttribute="top" constant="48" id="azM-9m-eHP"/>
+                                <constraint firstItem="Pxx-sc-0SL" firstAttribute="leading" secondItem="OSC-mP-HCy" secondAttribute="leading" constant="82" id="cNj-xb-osR"/>
                                 <constraint firstItem="7qf-4F-QmH" firstAttribute="leading" secondItem="OSC-mP-HCy" secondAttribute="leading" constant="12" id="dtG-8z-CTI"/>
                                 <constraint firstItem="9dP-HH-Eo2" firstAttribute="leading" secondItem="g5p-dt-NW0" secondAttribute="trailing" constant="5" id="e8n-zd-MTU"/>
                                 <constraint firstItem="SbF-5V-BSL" firstAttribute="top" secondItem="H3K-v7-FmM" secondAttribute="bottom" constant="100" id="iUN-GK-in9"/>
@@ -212,6 +224,7 @@
                 <constraint firstAttribute="bottom" secondItem="jbI-cm-lsK" secondAttribute="bottom" id="kBU-P4-nXm"/>
                 <constraint firstItem="JJa-Ja-h0m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sl3-4m-bRI"/>
             </constraints>
+            <point key="canvasLocation" x="31.5" y="90.5"/>
         </view>
     </objects>
     <resources>

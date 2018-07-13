@@ -15,6 +15,8 @@
 		18233CF220EC6E9E000B11C0 /* FYCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CF120EC6E9E000B11C0 /* FYCardModel.m */; };
 		18233CF620EC9335000B11C0 /* FYAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CF420EC9335000B11C0 /* FYAddCardViewController.m */; };
 		18233CF720EC9335000B11C0 /* FYAddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18233CF520EC9335000B11C0 /* FYAddCardViewController.xib */; };
+		18233CFA20EE00B7000B11C0 /* FYCertificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CF920EE00B7000B11C0 /* FYCertificationViewController.m */; };
+		18233CFD20EE2785000B11C0 /* FYBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18233CFC20EE2785000B11C0 /* FYBannerModel.m */; };
 		183C72DF20E9F688004CBA8E /* FYOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C72DE20E9F688004CBA8E /* FYOrderListViewController.m */; };
 		183C72E320EA0427004CBA8E /* FYOrderListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C72E120EA0427004CBA8E /* FYOrderListTableViewCell.m */; };
 		183C72E420EA0427004CBA8E /* FYOrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C72E220EA0427004CBA8E /* FYOrderListTableViewCell.xib */; };
@@ -74,6 +76,7 @@
 		185D7B4820DB86300039DAC8 /* AddressTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D7B4620DB86300039DAC8 /* AddressTableViewCell1.xib */; };
 		185D7B4C20DB863E0039DAC8 /* Address2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D7B4A20DB863E0039DAC8 /* Address2TableViewCell.m */; };
 		185D7B4D20DB863E0039DAC8 /* Address2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D7B4B20DB863E0039DAC8 /* Address2TableViewCell.xib */; };
+		1878A30A20EEFC1200EB945F /* FYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1878A30920EEFC1200EB945F /* FYWebViewController.m */; };
 		1890C59520E21070006CD872 /* FYOpenStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59320E2106F006CD872 /* FYOpenStoreViewController.m */; };
 		1890C59620E21070006CD872 /* FYOpenStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C59420E2106F006CD872 /* FYOpenStoreViewController.xib */; };
 		1890C59A20E212D1006CD872 /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C59820E212D1006CD872 /* GCPlaceholderTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -96,6 +99,7 @@
 		1890C5CF20E60570006CD872 /* FYOrderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C5CE20E60570006CD872 /* FYOrderFooterView.xib */; };
 		1890C5D320E60EBB006CD872 /* FYOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890C5D120E60EBB006CD872 /* FYOrderTableViewCell.m */; };
 		1890C5D420E60EBB006CD872 /* FYOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890C5D220E60EBB006CD872 /* FYOrderTableViewCell.xib */; };
+		18A56C8B20F49DF5006787D8 /* AGSimpleImageEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A56C8A20F49DF5006787D8 /* AGSimpleImageEditorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A4807F7DDF6D70A2B5A1BAD1 /* libPods-FanYou.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C8ADDE997691A220E3C2B8 /* libPods-FanYou.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +134,10 @@
 		18233CF320EC9335000B11C0 /* FYAddCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYAddCardViewController.h; sourceTree = "<group>"; };
 		18233CF420EC9335000B11C0 /* FYAddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYAddCardViewController.m; sourceTree = "<group>"; };
 		18233CF520EC9335000B11C0 /* FYAddCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYAddCardViewController.xib; sourceTree = "<group>"; };
+		18233CF820EE00B7000B11C0 /* FYCertificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYCertificationViewController.h; sourceTree = "<group>"; };
+		18233CF920EE00B7000B11C0 /* FYCertificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYCertificationViewController.m; sourceTree = "<group>"; };
+		18233CFB20EE2785000B11C0 /* FYBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYBannerModel.h; sourceTree = "<group>"; };
+		18233CFC20EE2785000B11C0 /* FYBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYBannerModel.m; sourceTree = "<group>"; };
 		183C72DD20E9F688004CBA8E /* FYOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderListViewController.h; sourceTree = "<group>"; };
 		183C72DE20E9F688004CBA8E /* FYOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderListViewController.m; sourceTree = "<group>"; };
 		183C72E020EA0427004CBA8E /* FYOrderListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderListTableViewCell.h; sourceTree = "<group>"; };
@@ -233,6 +241,8 @@
 		185D7B4920DB863E0039DAC8 /* Address2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address2TableViewCell.h; sourceTree = "<group>"; };
 		185D7B4A20DB863E0039DAC8 /* Address2TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address2TableViewCell.m; sourceTree = "<group>"; };
 		185D7B4B20DB863E0039DAC8 /* Address2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Address2TableViewCell.xib; sourceTree = "<group>"; };
+		1878A30820EEFC1200EB945F /* FYWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYWebViewController.h; sourceTree = "<group>"; };
+		1878A30920EEFC1200EB945F /* FYWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYWebViewController.m; sourceTree = "<group>"; };
 		1890C59220E2106F006CD872 /* FYOpenStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOpenStoreViewController.h; sourceTree = "<group>"; };
 		1890C59320E2106F006CD872 /* FYOpenStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOpenStoreViewController.m; sourceTree = "<group>"; };
 		1890C59420E2106F006CD872 /* FYOpenStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOpenStoreViewController.xib; sourceTree = "<group>"; };
@@ -272,6 +282,8 @@
 		1890C5D020E60EBB006CD872 /* FYOrderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYOrderTableViewCell.h; sourceTree = "<group>"; };
 		1890C5D120E60EBB006CD872 /* FYOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYOrderTableViewCell.m; sourceTree = "<group>"; };
 		1890C5D220E60EBB006CD872 /* FYOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FYOrderTableViewCell.xib; sourceTree = "<group>"; };
+		18A56C8920F49DF5006787D8 /* AGSimpleImageEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSimpleImageEditorView.h; sourceTree = "<group>"; };
+		18A56C8A20F49DF5006787D8 /* AGSimpleImageEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSimpleImageEditorView.m; sourceTree = "<group>"; };
 		1BA16CA68B5C415F3A67360E /* Pods-FanYou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanYou.release.xcconfig"; path = "Pods/Target Support Files/Pods-FanYou/Pods-FanYou.release.xcconfig"; sourceTree = "<group>"; };
 		40C8ADDE997691A220E3C2B8 /* libPods-FanYou.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FanYou.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF348C5120BA639F173D329 /* Pods-FanYou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FanYou.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FanYou/Pods-FanYou.debug.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +411,8 @@
 			children = (
 				1856033420C8DED1007239E7 /* HomeViewController.h */,
 				1856033520C8DED1007239E7 /* HomeViewController.m */,
+				1878A30820EEFC1200EB945F /* FYWebViewController.h */,
+				1878A30920EEFC1200EB945F /* FYWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +424,8 @@
 				185603CC20D10C40007239E7 /* FYHomeModel.m */,
 				185603CE20D10C53007239E7 /* FYHomeStoreModel.h */,
 				185603CF20D10C53007239E7 /* FYHomeStoreModel.m */,
+				18233CFB20EE2785000B11C0 /* FYBannerModel.h */,
+				18233CFC20EE2785000B11C0 /* FYBannerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -583,6 +599,8 @@
 		1856038420CE29D9007239E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18A56C8920F49DF5006787D8 /* AGSimpleImageEditorView.h */,
+				18A56C8A20F49DF5006787D8 /* AGSimpleImageEditorView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -682,6 +700,8 @@
 				185603FD20D8E7D4007239E7 /* FYChangeNameViewController.m */,
 				185603FF20D8ECF1007239E7 /* FYChangePwdViewController.h */,
 				1856040020D8ECF1007239E7 /* FYChangePwdViewController.m */,
+				18233CF820EE00B7000B11C0 /* FYCertificationViewController.h */,
+				18233CF920EE00B7000B11C0 /* FYCertificationViewController.m */,
 			);
 			path = "个人资料";
 			sourceTree = "<group>";
@@ -999,6 +1019,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18233CFD20EE2785000B11C0 /* FYBannerModel.m in Sources */,
+				1878A30A20EEFC1200EB945F /* FYWebViewController.m in Sources */,
 				1856038820CE29FA007239E7 /* FYLoginViewController.m in Sources */,
 				1856040A20DA2B3E007239E7 /* FYWithDrawViewController.m in Sources */,
 				1856037B20CA3BF8007239E7 /* NetWorkManager.m in Sources */,
@@ -1052,11 +1074,13 @@
 				185603FE20D8E7D4007239E7 /* FYChangeNameViewController.m in Sources */,
 				1856033320C8DED1007239E7 /* AppDelegate.m in Sources */,
 				185D7B4720DB86300039DAC8 /* AddressTableViewCell1.m in Sources */,
+				18233CFA20EE00B7000B11C0 /* FYCertificationViewController.m in Sources */,
 				183C72E720EA0AC3004CBA8E /* FYOrderListModel.m in Sources */,
 				1856039620D0CF3C007239E7 /* FYUser.m in Sources */,
 				18233CEF20EB68BC000B11C0 /* FYOrderDetailModel.m in Sources */,
 				1890C5BB20E39458006CD872 /* FYStoreListViewController.m in Sources */,
 				18233CF620EC9335000B11C0 /* FYAddCardViewController.m in Sources */,
+				18A56C8B20F49DF5006787D8 /* AGSimpleImageEditorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1228,6 +1252,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KF7MXBQY9D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FanYou/fanyoupch.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1248,7 +1273,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fy.FanYou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanyou.fyshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";
@@ -1262,6 +1287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KF7MXBQY9D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FanYou/fanyoupch.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1282,7 +1308,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fy.FanYou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanyou.fyshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${PODS_ROOT}/**";

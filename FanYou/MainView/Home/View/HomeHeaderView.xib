@@ -21,17 +21,18 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuG-29-2nm">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
                     <subviews>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOP-JE-4mX" customClass="SDCycleScrollView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOP-JE-4mX" customClass="SDCycleScrollView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycw-W3-xTz">
-                            <rect key="frame" x="12" y="31" width="21" height="22"/>
+                            <rect key="frame" x="0.0" y="20" width="43" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="22" id="Tvw-9K-L7T"/>
-                                <constraint firstAttribute="width" constant="21" id="UWY-g9-pLR"/>
+                                <constraint firstAttribute="height" constant="44" id="Tvw-9K-L7T"/>
+                                <constraint firstAttribute="width" constant="43" id="UWY-g9-pLR"/>
                             </constraints>
-                            <state key="normal" image="我的icon-"/>
+                            <state key="normal" image="我的-icon"/>
                             <connections>
                                 <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xtn-Iw-Dtn"/>
                             </connections>
@@ -41,7 +42,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="XQi-mg-KoL"/>
                             </constraints>
-                            <state key="normal" image="searchBar"/>
+                            <state key="normal" image="搜索框"/>
                             <connections>
                                 <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="btj-Qv-cN9"/>
                             </connections>
@@ -72,14 +73,14 @@
                         <constraint firstAttribute="trailing" secondItem="ZOP-JE-4mX" secondAttribute="trailing" id="0IX-dJ-k1k"/>
                         <constraint firstItem="z8L-Kx-61y" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" constant="50" id="1XG-MX-qtT"/>
                         <constraint firstAttribute="height" constant="217" id="9Ka-4w-nD0"/>
-                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" constant="31" id="Gwi-2Y-gTl"/>
+                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" constant="20" id="Gwi-2Y-gTl"/>
                         <constraint firstItem="rGJ-Zi-zRj" firstAttribute="centerX" secondItem="yuG-29-2nm" secondAttribute="centerX" id="HeR-Hv-5MY"/>
                         <constraint firstItem="rGJ-Zi-zRj" firstAttribute="top" secondItem="gbx-Kp-j0O" secondAttribute="bottom" constant="20" id="PXi-8S-L1o"/>
                         <constraint firstItem="ZOP-JE-4mX" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" id="PYg-GP-dF1"/>
-                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" constant="12" id="QAX-Tz-F3n"/>
+                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" id="QAX-Tz-F3n"/>
                         <constraint firstItem="gbx-Kp-j0O" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" constant="27" id="RPb-am-a9k"/>
                         <constraint firstAttribute="trailing" secondItem="z8L-Kx-61y" secondAttribute="trailing" constant="50" id="UmW-MB-wWy"/>
-                        <constraint firstItem="gbx-Kp-j0O" firstAttribute="leading" secondItem="Ycw-W3-xTz" secondAttribute="trailing" constant="10" id="W7H-pM-kTE"/>
+                        <constraint firstItem="gbx-Kp-j0O" firstAttribute="leading" secondItem="Ycw-W3-xTz" secondAttribute="trailing" id="W7H-pM-kTE"/>
                         <constraint firstAttribute="bottom" secondItem="ZOP-JE-4mX" secondAttribute="bottom" id="XBq-5R-CUm"/>
                         <constraint firstItem="ZOP-JE-4mX" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" id="hLh-zi-uQi"/>
                         <constraint firstItem="z8L-Kx-61y" firstAttribute="top" secondItem="rGJ-Zi-zRj" secondAttribute="bottom" constant="15" id="k0d-Ti-KVz"/>
@@ -465,13 +466,13 @@
         </view>
     </objects>
     <resources>
-        <image name="searchBar" width="640" height="60"/>
         <image name="商品icon-" width="74" height="74"/>
         <image name="店铺icon-" width="74" height="74"/>
         <image name="开店icon-" width="74" height="74"/>
-        <image name="我的icon-" width="42" height="44"/>
+        <image name="我的-icon" width="21" height="21"/>
         <image name="我的店铺-icon-" width="74" height="74"/>
         <image name="提现icon-" width="74" height="74"/>
+        <image name="搜索框" width="320" height="30"/>
         <image name="转账icon-" width="74" height="74"/>
         <image name="默认头像-" width="110" height="110"/>
     </resources>

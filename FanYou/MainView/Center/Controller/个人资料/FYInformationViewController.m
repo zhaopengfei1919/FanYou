@@ -9,6 +9,7 @@
 #import "FYInformationViewController.h"
 #import "FYChangeNameViewController.h"
 #import "FYChangePwdViewController.h"
+#import "FYCertificationViewController.h"
 
 NSString *UPLOAD_IMG=@"";
 @interface FYInformationViewController ()<UIAlertViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -33,7 +34,7 @@ NSString *UPLOAD_IMG=@"";
         weakself.CardLabel.text = [result safeObjectForKey:@"id_card_no"];
         NSString * gender = [result safeObjectForKey:@"gender"];
         if ([gender isEqualToString:@""]) {
-            weakself.SexLabel.text = @"请选择";
+            
         }else if ([gender intValue] == 1) {
             weakself.SexLabel.text = @"男";
         }else
@@ -79,39 +80,20 @@ NSString *UPLOAD_IMG=@"";
     }else if (btn.tag == 3){
 
     }else if (btn.tag == 4){
-        
+        FYCertificationViewController * certification = [[FYCertificationViewController alloc]init];
+        [self.navigationController pushViewController:certification animated:YES];
     }else if (btn.tag == 5){
-        [self changeSex];
+        FYCertificationViewController * certification = [[FYCertificationViewController alloc]init];
+        [self.navigationController pushViewController:certification animated:YES];
     }else if (btn.tag == 6){
-        
+        FYCertificationViewController * certification = [[FYCertificationViewController alloc]init];
+        [self.navigationController pushViewController:certification animated:YES];
     }else if (btn.tag == 7){
         FYChangePwdViewController *changepwd = [[FYChangePwdViewController alloc]init];
         [self.navigationController pushViewController:changepwd animated:YES];
     }
 }
--(void)changeSex{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDestructive handler:^(UIAlertAction*action) {
-        [self surechangeSex:@"男"];
-    }];
-    UIAlertAction *SureAction = [UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDestructive handler:^(UIAlertAction*action) {
-        [self surechangeSex:@"女"];
-    }];
-    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    
-    [otherAction setValue:UIColorFromRGB(0x2a57d8) forKey:@"titleTextColor"];
-    [SureAction setValue:UIColorFromRGB(0x2a57d8) forKey:@"titleTextColor"];
-    [cancel setValue:UIColorFromRGB(0x2a57d8) forKey:@"titleTextColor"];
-    [alertController addAction:otherAction];
-    [alertController addAction:SureAction];
-    [alertController addAction:cancel];
-    [self presentViewController:alertController animated:YES completion:nil];
-}
--(void)surechangeSex:(NSString *)sex{
-    
-}
+
 -(void)headerbtn{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"从相册中选择" style:UIAlertActionStyleDestructive handler:^(UIAlertAction*action) {
@@ -215,20 +197,17 @@ NSString *UPLOAD_IMG=@"";
         
         self.headerImage.image = image;
         
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",@"text/plain", nil];
-        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-        
         NSMutableDictionary * oderParams = [[NSMutableDictionary alloc] init];
         [oderParams setObject:[FYUser userInfo].userId forKey:@"user_id"];
         NSData * data = UIImageJPEGRepresentation(image, 0.4);
         [oderParams setObject:data forKey:@"avatar"];
         
-//        WS(weakself);
-        [NetWorkManager requestWithMethod:POST Url:SetAvatar Parameters:oderParams success:^(id responseObject) {
+        WS(weakself);
+        [NetWorkManager requestWithMethod:POST Url:SetAvatars Parameters:oderParams success:^(id responseObject) {
             NSString * succeeded = [responseObject objectForKey:@"succeeded"];
             if ([succeeded intValue] == 1) {
-                
+                NSDictionary * result = [responseObject safeObjectForKey:@"result"];
+                [weakself.headerImage sd_setImageWithURL:[NSURL URLWithString:[result safeObjectForKey:@"filepath"]] placeholderImage:[UIImage imageNamed:@"默认头像-"]];
             }else
                 [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
         } requestRrror:^(id requestRrror) {

@@ -94,12 +94,13 @@
 */
 
 - (IBAction)ChosenBank:(id)sender {
+    WS(weakself);
     FYMyCardViewController * card = [[FYMyCardViewController alloc]init];
     card.ischosen = YES;
     [self.navigationController pushViewController:card animated:YES];
     card.chosen = ^(FYCardModel *model) {
-        self.model = model;
-        
+        weakself.model = model;
+        [weakself setupUI];
     };
 }
 -(void)setupUI{
@@ -120,5 +121,23 @@
 }
 
 - (IBAction)withdraw:(id)sender {
+    if (self.PriceTF.text.length == 0) {
+        [SVProgressHUD showErrorWithStatus:@"请输入提现金额"];
+        return;
+    }
+    WS(weakself);
+    NSMutableDictionary *paraDic = @{}.mutableCopy;
+    [paraDic setObject:self.model.card_id forKey:@"card_id"];
+    [paraDic setObject:self.PriceTF.text forKey:@"amount"];
+    
+    [NetWorkManager requestWithMethod:POST Url:Withdraw Parameters:paraDic success:^(id responseObject) {
+        NSString * succeeded = [responseObject objectForKey:@"succeeded"];
+        if ([succeeded intValue] == 1) {
+            [weakself.navigationController popViewControllerAnimated:YES];
+        }else{
+        }
+    } requestRrror:^(id requestRrror) {
+        
+    }];
 }
 @end

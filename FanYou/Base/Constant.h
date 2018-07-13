@@ -12,6 +12,7 @@
 #define Constant_h
 
 #define HTTPURL @"http://mall.sdshopping.cn/"
+#define KEY @"123456"
 
 //登录接口
 #define Login @"user/login"
@@ -26,11 +27,13 @@
 //用户详情
 #define UserDetail @"user/detail"
 //上传头像
-#define SetAvatar @"user/set-avatars"
+#define SetAvatars @"user/set-avatars"
 //修改密码
 #define UpdatePwd @"user/update-pwd"
 //修改昵称
 #define SetnickName @"user/set-nickname"
+//实名验证
+#define VerifyIdCard @"user/verify-idcard"
 
 
 //热销商品

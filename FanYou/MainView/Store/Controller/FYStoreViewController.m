@@ -50,8 +50,13 @@
                 [weakself.table addSubview:tishilabel];
             }
             [weakself.table reloadData];
-        }else
+        }else{
+            if (self->page_number == 0) {
+                [weakself.dataSourse removeAllObjects];
+                [weakself.table reloadData];
+            }
             [SVProgressHUD showErrorWithStatus:[responseObject safeObjectForKey:@"errmsg"]];
+        }
         [weakself.table.mj_header endRefreshing];
         [weakself.table.mj_footer endRefreshing];
     } requestRrror:^(id requestRrror) {
@@ -189,11 +194,15 @@
 }
 
 - (IBAction)UploadGoods:(id)sender {
-    [self AddGoods:nil];
+    FYAddCommodityViewController * commodity = [[FYAddCommodityViewController alloc]init];
+    commodity.shopId = self.model.shop_id;
+    commodity.titleStr = @"上传商品";
+    [self.navigationController pushViewController:commodity animated:YES];
 }
 - (IBAction)AddGoods:(id)sender {
     FYAddCommodityViewController * commodity = [[FYAddCommodityViewController alloc]init];
     commodity.shopId = self.model.shop_id;
+    commodity.titleStr = @"添加商品";
     [self.navigationController pushViewController:commodity animated:YES];
 }
 - (IBAction)returnHome:(id)sender {
