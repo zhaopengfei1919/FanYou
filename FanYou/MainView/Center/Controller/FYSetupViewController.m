@@ -27,12 +27,19 @@
     gradientLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH - 24, 37);
     [self.SignOutBtn.layer addSublayer:gradientLayer];
     
-    NSMutableData *data = [[EGOCache currentCache] getCacheData];
-    float mmm = data.length/(1024.0*1024.0);
+//    NSMutableData *data = [[EGOCache currentCache] getCacheData];
+    float mmm = [self folderSize];
     self.HuanCunLabel.text = [NSString stringWithFormat:@"%.2fM",mmm];
     // Do any additional setup after loading the view from its nib.
 }
+- (float ) folderSize{
+    unsigned long iLength = [[SDImageCache sharedImageCache]getSize]/(1024.0*1024.0);
 
+    NSInteger sizeInteger = [[NSURLCache sharedURLCache] currentDiskUsage];
+    float sizeInMB = sizeInteger / (1024.0f * 1024.0f);
+    
+    return sizeInMB + iLength;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,7 +57,9 @@
 
 - (IBAction)clearHuancun:(id)sender {
     self.HuanCunLabel.text = @"0.00M";
-    [[EGOCache currentCache] clearCache];
+    //SDWebImage清理缓存
+    [[[SDWebImageManager sharedManager] imageCache] clearMemory];
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 - (void)clearCacheSuccess{

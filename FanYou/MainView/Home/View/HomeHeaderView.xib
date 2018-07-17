@@ -26,19 +26,19 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycw-W3-xTz">
-                            <rect key="frame" x="0.0" y="20" width="43" height="44"/>
+                            <rect key="frame" x="7" y="27" width="30" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="Tvw-9K-L7T"/>
-                                <constraint firstAttribute="width" constant="43" id="UWY-g9-pLR"/>
+                                <constraint firstAttribute="height" constant="30" id="Tvw-9K-L7T"/>
+                                <constraint firstAttribute="width" constant="30" id="UWY-g9-pLR"/>
                             </constraints>
-                            <state key="normal" image="我的-icon"/>
+                            <state key="normal" backgroundImage="我的-icon"/>
                             <connections>
                                 <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xtn-Iw-Dtn"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-Kp-j0O">
-                            <rect key="frame" x="43" y="27" width="320" height="30"/>
+                            <rect key="frame" x="44" y="27" width="319" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="XQi-mg-KoL"/>
                             </constraints>
@@ -73,14 +73,14 @@
                         <constraint firstAttribute="trailing" secondItem="ZOP-JE-4mX" secondAttribute="trailing" id="0IX-dJ-k1k"/>
                         <constraint firstItem="z8L-Kx-61y" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" constant="50" id="1XG-MX-qtT"/>
                         <constraint firstAttribute="height" constant="217" id="9Ka-4w-nD0"/>
-                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" constant="20" id="Gwi-2Y-gTl"/>
+                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" constant="27" id="Gwi-2Y-gTl"/>
                         <constraint firstItem="rGJ-Zi-zRj" firstAttribute="centerX" secondItem="yuG-29-2nm" secondAttribute="centerX" id="HeR-Hv-5MY"/>
                         <constraint firstItem="rGJ-Zi-zRj" firstAttribute="top" secondItem="gbx-Kp-j0O" secondAttribute="bottom" constant="20" id="PXi-8S-L1o"/>
                         <constraint firstItem="ZOP-JE-4mX" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" id="PYg-GP-dF1"/>
-                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" id="QAX-Tz-F3n"/>
+                        <constraint firstItem="Ycw-W3-xTz" firstAttribute="leading" secondItem="yuG-29-2nm" secondAttribute="leading" constant="7" id="QAX-Tz-F3n"/>
                         <constraint firstItem="gbx-Kp-j0O" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" constant="27" id="RPb-am-a9k"/>
                         <constraint firstAttribute="trailing" secondItem="z8L-Kx-61y" secondAttribute="trailing" constant="50" id="UmW-MB-wWy"/>
-                        <constraint firstItem="gbx-Kp-j0O" firstAttribute="leading" secondItem="Ycw-W3-xTz" secondAttribute="trailing" id="W7H-pM-kTE"/>
+                        <constraint firstItem="gbx-Kp-j0O" firstAttribute="leading" secondItem="Ycw-W3-xTz" secondAttribute="trailing" constant="7" id="W7H-pM-kTE"/>
                         <constraint firstAttribute="bottom" secondItem="ZOP-JE-4mX" secondAttribute="bottom" id="XBq-5R-CUm"/>
                         <constraint firstItem="ZOP-JE-4mX" firstAttribute="top" secondItem="yuG-29-2nm" secondAttribute="top" id="hLh-zi-uQi"/>
                         <constraint firstItem="z8L-Kx-61y" firstAttribute="top" secondItem="rGJ-Zi-zRj" secondAttribute="bottom" constant="15" id="k0d-Ti-KVz"/>
