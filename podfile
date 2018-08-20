@@ -1,0 +1,17 @@
+platform :ios,'8.0'
+target "FanYou" do
+pod 'AFNetworking'
+
+pod 'SDWebImage', '~> 4.2.2'
+pod 'Toast', '~> 3.0'
+pod 'TZImagePickerController', '~> 1.9.3'
+pod 'SDCycleScrollView'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'Masonry'
+
+
+
+
+
+end
