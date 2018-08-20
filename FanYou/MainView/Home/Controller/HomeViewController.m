@@ -51,6 +51,7 @@
         self.header.AdScroll.hidden = YES;
     }
 }
+//热门店铺
 -(void)hotshop{
     WS(weakself);
     NSMutableDictionary *paraDic = @{}.mutableCopy;
@@ -67,6 +68,7 @@
         
     }];
 }
+//热门商品
 -(void)hotgoods{
     WS(weakself);
     NSMutableDictionary *paraDic = @{}.mutableCopy;
@@ -83,6 +85,7 @@
         
     }];
 }
+//首页banner列表
 -(void)adlist{
     WS(weakself);
     NSMutableDictionary *paraDic = @{}.mutableCopy;
@@ -136,6 +139,7 @@
     web.webUrl = model.url;
     [self.navigationController pushViewController:web animated:YES];
 }
+
 -(void)homeheaderviewClick:(NSInteger)btntag{
     if (btntag == 3) {
         FYLoginViewController * login = [[FYLoginViewController alloc]init];
@@ -276,18 +280,19 @@
         cell.model = array2[indexPath.row];
         return cell;
     }else if (array2.count > 0 || array1.count > 0){
-        if (array1.count > 0) {
+        if (array1.count > 0) {//热门商品
             FYHomeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"FYHomeTableViewCell"];
             cell.Model = array1[indexPath.row];
             return cell;
+        }else{//热门店铺
+            FYHomeStoreTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"FYHomeStoreTableViewCell"];
+            cell.model = array2[indexPath.row];
+            return cell;
         }
-        FYHomeStoreTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"FYHomeStoreTableViewCell"];
-        cell.model = array2[indexPath.row];
-        return cell;
     }
     return nil;
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{//热门店铺才需要点击事件，热门商品上有按钮点击事件
     NSArray * array1 = self.dataSourse[0];
     NSArray * array2 = self.dataSourse[1];
     if (array1.count > 0 && array2.count > 0) {
